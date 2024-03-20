@@ -6,6 +6,7 @@
 
     <persistence-unit name="tours" transaction-type="RESOURCE_LOCAL">
         <class>org.tours.toursiteback.model.TourCard</class>
+        <class>org.tours.toursiteback.model.TourInfo</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />

@@ -9,6 +9,7 @@ import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
 import lombok.Getter;
 import org.tours.toursiteback.model.TourCard;
+import org.tours.toursiteback.model.TourInfo;
 
 @Getter
 public class JDBCConnector {
@@ -22,8 +23,11 @@ public class JDBCConnector {
     private CriteriaQuery<TourCard> tourCardCriteriaQuery = criteriaBuilder.createQuery(TourCard.class);
     private Root<TourCard> tourCardRoot = tourCardCriteriaQuery.from(TourCard.class);
 
-    //other
+    //TourInfo
+    private CriteriaQuery<TourInfo> tourInfoCriteriaQuery = criteriaBuilder.createQuery(TourInfo.class);
+    private Root<TourInfo> tourInfoRoot = tourInfoCriteriaQuery.from(TourInfo.class);
 
+    //other
 
     public static JDBCConnector instance;
 
@@ -37,5 +41,10 @@ public class JDBCConnector {
     public void initializeTourCardCriteria() {
         tourCardCriteriaQuery = criteriaBuilder.createQuery(TourCard.class);
         tourCardRoot = tourCardCriteriaQuery.from(TourCard.class);
+    }
+
+    public void initializeTourInfoCriteria() {
+        tourInfoCriteriaQuery = criteriaBuilder.createQuery(TourInfo.class);
+        tourInfoRoot = tourInfoCriteriaQuery.from(TourInfo.class);
     }
 }
