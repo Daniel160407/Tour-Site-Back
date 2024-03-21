@@ -1,4 +1,4 @@
-package org.tours.toursiteback.dao;
+package org.tours.toursiteback.dao.mysql;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

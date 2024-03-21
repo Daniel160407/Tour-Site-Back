@@ -5,7 +5,7 @@ import java.io.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import org.tours.toursiteback.dao.MySQLController;
+import org.tours.toursiteback.dao.mysql.MySQLController;
 
 @WebServlet("/tourCard")
 public class TourCardServlet extends HttpServlet {

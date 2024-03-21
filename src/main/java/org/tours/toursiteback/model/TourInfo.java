@@ -23,4 +23,9 @@ public class TourInfo {
 
     @Column(name = "duration")
     private String duration;
+
+    public TourInfo(String direction, String duration) {
+        this.direction = direction;
+        this.duration = duration;
+    }
 }

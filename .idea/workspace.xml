@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aea6e974-98b4-4bdd-8cd5-eaff76f23c5d" name="Changes" comment="Added ability to get tour card data">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/model/TourInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/response/GetTourInfoResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/servlet/TourInfoServlet.java" afterDir="false" />
+    <list default="true" id="aea6e974-98b4-4bdd-8cd5-eaff76f23c5d" name="Changes" comment="Added ability to get tour info">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/mongoDB/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/mongoDB/MongoDBConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/mongoDB/MongoDBController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/manager/ImageManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/manager/MergedJsonManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/request/AddNewTourRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/servlet/AddTourServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/JDBCConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/JDBCConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/JDBCController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/JDBCController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/MySQLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/MySQLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/JDBCConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/mysql/JDBCConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/JDBCController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/mysql/JDBCController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/MySQLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/dao/mysql/MySQLController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/model/TourCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/model/TourCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/model/TourInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/model/TourInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/servlet/TourCardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/servlet/TourCardServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/servlet/TourInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tours/toursiteback/servlet/TourInfoServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +28,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
@@ -51,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -72,6 +76,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.F:/Programming Files/myJavaProjects/tour-site-back [build] (1).executor&quot;: &quot;Run&quot;,
     &quot;Gradle.F:/Programming Files/myJavaProjects/tour-site-back [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Tour-Site-Back [:Application.main()].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -102,7 +107,7 @@
       <recent name="F:\Programming Files\myJavaProjects\tour-site-back\build" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="Gradle.F:/Programming Files/myJavaProjects/tour-site-back [build] (1)">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.tours.toursiteback.Application" />
       <module name="Tour-Site-Back.main" />
@@ -115,6 +120,28 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="F:/Programming Files/myJavaProjects/tour-site-back [build] (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="F:/Programming Files/myJavaProjects/tour-site-back [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -153,6 +180,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.F:/Programming Files/myJavaProjects/tour-site-back [build] (1)" />
         <item itemvalue="Application.Application" />
         <item itemvalue="Gradle.F:/Programming Files/myJavaProjects/tour-site-back [build]" />
       </list>
@@ -177,7 +205,11 @@
       <workItem from="1710862883298" duration="3392000" />
       <workItem from="1710926898820" duration="245000" />
       <workItem from="1710927863174" duration="6259000" />
-      <workItem from="1710937500588" duration="2253000" />
+      <workItem from="1710937500588" duration="4078000" />
+      <workItem from="1710952348954" duration="10000" />
+      <workItem from="1711034821785" duration="2683000" />
+      <workItem from="1711038631228" duration="1181000" />
+      <workItem from="1711039892555" duration="62000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -195,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710938611767</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added ability to get tour info">
+      <option name="closed" value="true" />
+      <created>1710939886147</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710939886147</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +247,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added ability to get tour card data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ability to get tour card data" />
+    <MESSAGE value="Added ability to get tour info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ability to get tour info" />
   </component>
 </project>

@@ -1,9 +1,12 @@
-package org.tours.toursiteback.dao;
+package org.tours.toursiteback.dao.mysql;
 
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaQuery;
+import org.tours.toursiteback.dao.mysql.JDBCConnector;
+import org.tours.toursiteback.dao.mysql.JDBCController;
 import org.tours.toursiteback.model.TourCard;
 import org.tours.toursiteback.model.TourInfo;
+import org.tours.toursiteback.request.AddNewTourRequest;
 import org.tours.toursiteback.response.GetTourInfoResponse;
 import org.tours.toursiteback.response.GetToursResponse;
 
@@ -43,5 +46,33 @@ public class MySQLController implements JDBCController {
         TourInfo tourInfo = typedQuery.getSingleResult();
 
         return new GetTourInfoResponse(tourInfo.getId(), tourInfo.getDirection(), tourInfo.getDuration());
+    }
+
+    @Override
+    public void addNewTour(AddNewTourRequest tour) {
+        jdbcConnector.initializeTourInfoCriteria();
+
+        try {
+            jdbcConnector.getEntityTransaction().begin();
+
+            TourInfo tourInfo = new TourInfo(tour.direction(), tour.duration());
+            jdbcConnector.getEntityManager().persist(tourInfo); //TODO: It may has bugs
+
+            jdbcConnector.getEntityTransaction().commit();
+
+
+            jdbcConnector.initializeTourCardCriteria();
+            jdbcConnector.getEntityTransaction().begin();
+
+            TourCard tourCard = new TourCard(2,tour.title(), tour.description());
+            jdbcConnector.getEntityManager().persist(tourCard);  //TODO: It may has bugs
+
+            jdbcConnector.getEntityTransaction().commit();
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+            if (jdbcConnector.getEntityTransaction().isActive()) {
+                jdbcConnector.getEntityTransaction().rollback();
+            }
+        }
     }
 }

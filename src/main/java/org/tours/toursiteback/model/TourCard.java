@@ -20,4 +20,9 @@ public class TourCard {
 
     @Column(name = "description")
     private String description;
+
+    public TourCard(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
 }
