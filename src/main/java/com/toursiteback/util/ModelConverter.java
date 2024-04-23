@@ -24,6 +24,8 @@ public class ModelConverter {
         return TourDto.builder()
                 .name(tour.getName())
                 .description(tour.getDescription())
+                .direction(tour.getDirection())
+                .imgUrl(tour.getImgUrl())
                 .build();
     }
 
@@ -40,6 +42,8 @@ public class ModelConverter {
         return Tour.builder()
                 .name(tourDto.getName())
                 .description(tourDto.getDescription())
+                .direction(tourDto.getDirection())
+                .imgUrl(tourDto.getImgUrl())
                 .build();
     }
 }

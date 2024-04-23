@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/Tours/tour")
+@RequestMapping("/tours/tour")
 @CrossOrigin(origins = "*")
 public class TourController {
     private final TourService tourService;

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/Tours/adminpanel")
+@RequestMapping("/tours/adminpanel")
 @CrossOrigin(origins = "*")
 public class AdminPanelController {
     private final AdminPanelService adminPanelService;

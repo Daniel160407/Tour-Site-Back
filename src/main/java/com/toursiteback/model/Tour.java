@@ -20,4 +20,8 @@ public class Tour {
     private String name;
     @Column(name = "description")
     private String description;
+    @Column(name = "direction")
+    private String direction;
+    @Column(name = "img_url")
+    private String imgUrl;
 }
