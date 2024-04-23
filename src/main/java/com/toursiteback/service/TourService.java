@@ -1,7 +1,7 @@
 package com.toursiteback.service;
 
-import org.springframework.stereotype.Service;
+import com.toursiteback.dto.TourCollectionDto;
 
-@Service
-public class TourService {
+public interface TourService {
+    TourCollectionDto getTours();
 }

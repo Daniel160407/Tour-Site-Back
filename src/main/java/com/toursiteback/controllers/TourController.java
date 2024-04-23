@@ -1,12 +1,11 @@
 package com.toursiteback.controllers;
 
 import com.toursiteback.dto.TourCollectionDto;
-import com.toursiteback.dto.TourDto;
 import com.toursiteback.service.TourService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,8 +20,9 @@ public class TourController {
         this.tourService = tourService;
     }
 
+    @GetMapping
     @ResponseBody
-    public TourCollectionDto getTours(@RequestBody TourDto tourDto) {
-
+    public TourCollectionDto getTours() {
+        return tourService.getTours();
     }
 }

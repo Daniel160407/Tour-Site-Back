@@ -6,6 +6,6 @@ import lombok.Data;
 @Data
 @Builder
 public class TourDto {
-    private int name;
+    private String name;
     private String description;
 }
