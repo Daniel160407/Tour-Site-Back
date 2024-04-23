@@ -35,4 +35,11 @@ public class ModelConverter {
         }
         return tourDtos;
     }
+
+    public Tour convert(TourDto tourDto) {
+        return Tour.builder()
+                .name(tourDto.getName())
+                .description(tourDto.getDescription())
+                .build();
+    }
 }

@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface TourRepository extends JpaRepository<Tour, Integer> {
     List<Tour> findAllBy();
+
+    Tour save(Tour tour);
 }
