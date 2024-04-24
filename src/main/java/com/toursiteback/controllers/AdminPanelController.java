@@ -2,14 +2,19 @@ package com.toursiteback.controllers;
 
 import com.toursiteback.dto.TourDto;
 import com.toursiteback.model.Admin;
+import com.toursiteback.model.TourWithImg;
 import com.toursiteback.service.adminPanel.AdminPanelService;
 import com.toursiteback.service.exception.InvalidEmailOrPasswordException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @Controller
 @RequestMapping("/tours/adminpanel")
@@ -35,8 +40,19 @@ public class AdminPanelController {
 
     @PostMapping
     @ResponseBody
-    public TourDto addTour(@RequestBody TourDto tourDto) {
-        return adminPanelService.addTour(tourDto);
+    public TourDto addTour(@RequestPart("title") String title,
+                           @RequestPart("description") String description,
+                           @RequestPart("direction") String direction,
+                           @RequestPart("image") MultipartFile image) {
+
+        return adminPanelService.addTour(
+                TourWithImg.builder()
+                        .name(title)
+                        .description(description)
+                        .direction(direction)
+                        .image(image)
+                        .build()
+        );
     }
 
     @RequestMapping(method = RequestMethod.OPTIONS)

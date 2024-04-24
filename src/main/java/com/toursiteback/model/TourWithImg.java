@@ -1,14 +1,14 @@
-package com.toursiteback.dto;
+package com.toursiteback.model;
 
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.web.multipart.MultipartFile;
 
 @Data
 @Builder
-public class TourDto {
+public class TourWithImg {
     private String name;
     private String description;
     private String direction;
-    private String imgUrl;
-    private byte[] imageData;
+    private MultipartFile image;
 }
