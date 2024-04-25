@@ -43,6 +43,8 @@ public class AdminPanelController {
     public TourDto addTour(@RequestPart("title") String title,
                            @RequestPart("description") String description,
                            @RequestPart("direction") String direction,
+                           @RequestPart("history") String history,
+                           @RequestPart("price") String price,
                            @RequestPart("image") MultipartFile image) {
 
         return adminPanelService.addTour(
@@ -50,6 +52,8 @@ public class AdminPanelController {
                         .name(title)
                         .description(description)
                         .direction(direction)
+                        .history(history)
+                        .price(price)
                         .image(image)
                         .build()
         );

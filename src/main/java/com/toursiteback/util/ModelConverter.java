@@ -26,6 +26,8 @@ public class ModelConverter {
                 .name(tour.getName())
                 .description(tour.getDescription())
                 .direction(tour.getDirection())
+                .history(tour.getHistory())
+                .price(tour.getPrice())
                 .imgUrl(tour.getImgUrl())
                 .build();
     }
@@ -44,6 +46,8 @@ public class ModelConverter {
                 .name(tourDto.getName())
                 .description(tourDto.getDescription())
                 .direction(tourDto.getDirection())
+                .history(tourDto.getHistory())
+                .price(tourDto.getPrice())
                 .imgUrl(tourDto.getImgUrl())
                 .build();
     }
@@ -53,6 +57,8 @@ public class ModelConverter {
                 .name(tour.getName())
                 .description(tour.getDescription())
                 .direction(tour.getDirection())
+                .history(tour.getHistory())
+                .price(tour.getPrice())
                 .imgUrl(imgUrl)
                 .build();
     }
@@ -62,6 +68,8 @@ public class ModelConverter {
                 .name(tour.getName())
                 .description(tour.getDescription())
                 .direction(tour.getDirection())
+                .history(tour.getHistory())
+                .price(tour.getPrice())
                 .build();
     }
 }
