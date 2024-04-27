@@ -2,6 +2,7 @@ package com.toursiteback.service.adminPanel;
 
 import com.toursiteback.dto.TourDto;
 import com.toursiteback.model.Admin;
+import com.toursiteback.model.Tour;
 import com.toursiteback.model.TourWithImg;
 import org.springframework.stereotype.Service;
 
@@ -9,4 +10,5 @@ import org.springframework.stereotype.Service;
 public interface AdminPanelService {
     void login(Admin admin);
     TourDto addTour(TourWithImg tour);
+    TourDto updateTour(TourDto tour);
 }

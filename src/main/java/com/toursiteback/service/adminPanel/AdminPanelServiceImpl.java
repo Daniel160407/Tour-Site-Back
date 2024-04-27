@@ -2,6 +2,7 @@ package com.toursiteback.service.adminPanel;
 
 import com.toursiteback.dto.TourDto;
 import com.toursiteback.model.Admin;
+import com.toursiteback.model.Tour;
 import com.toursiteback.model.TourWithImg;
 import com.toursiteback.repository.TourRepository;
 import com.toursiteback.service.exception.InvalidEmailOrPasswordException;
@@ -47,5 +48,18 @@ public class AdminPanelServiceImpl implements AdminPanelService {
         }
         tourRepository.save(modelConverter.convert(tour, uploadDir + tour.getImage().getOriginalFilename()));
         return modelConverter.convert(tour);
+    }
+
+    @Override
+    public TourDto updateTour(TourDto tour) {
+        Tour foundTour = tourRepository.findByName(tour.getName());
+        foundTour.setName(tour.getName());
+        foundTour.setDescription(tour.getDescription());
+        foundTour.setDirection(tour.getDirection());
+        foundTour.setHistory(tour.getHistory());
+        foundTour.setPrice(tour.getPrice());
+        foundTour.setImgUrl(tour.getImgUrl());
+        tourRepository.save(foundTour);
+        return tour;
     }
 }

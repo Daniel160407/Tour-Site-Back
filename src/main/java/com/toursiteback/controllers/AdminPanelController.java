@@ -2,6 +2,7 @@ package com.toursiteback.controllers;
 
 import com.toursiteback.dto.TourDto;
 import com.toursiteback.model.Admin;
+import com.toursiteback.model.Tour;
 import com.toursiteback.model.TourWithImg;
 import com.toursiteback.service.adminPanel.AdminPanelService;
 import com.toursiteback.service.exception.InvalidEmailOrPasswordException;
@@ -10,11 +11,6 @@ import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 @Controller
 @RequestMapping("/tours/adminpanel")
@@ -57,6 +53,12 @@ public class AdminPanelController {
                         .image(image)
                         .build()
         );
+    }
+
+    @PutMapping
+    @ResponseBody
+    public TourDto updateTour(@RequestBody TourDto tour){
+        return adminPanelService.updateTour(tour);
     }
 
     @RequestMapping(method = RequestMethod.OPTIONS)

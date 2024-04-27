@@ -13,7 +13,7 @@ import java.util.List;
 public class ModelConverter {
     public TourCollectionDto convertTours(List<Tour> tours) {
         List<TourDto> tourDtos = tours.stream()
-                .map(this::convertTourToDto)
+                .map(this::convert)
                 .toList();
 
         return TourCollectionDto.builder()
@@ -21,7 +21,7 @@ public class ModelConverter {
                 .build();
     }
 
-    private TourDto convertTourToDto(Tour tour) {
+    public TourDto convert(Tour tour) {
         return TourDto.builder()
                 .name(tour.getName())
                 .description(tour.getDescription())
@@ -36,7 +36,7 @@ public class ModelConverter {
         List<TourDto> tourDtos = new ArrayList<>();
 
         for (Tour tour : tours) {
-            tourDtos.add(convertTourToDto(tour));
+            tourDtos.add(convert(tour));
         }
         return tourDtos;
     }
