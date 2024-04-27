@@ -7,6 +7,7 @@ import com.toursiteback.model.TourWithImg;
 import com.toursiteback.repository.TourRepository;
 import com.toursiteback.service.exception.InvalidEmailOrPasswordException;
 import com.toursiteback.util.ModelConverter;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,5 +62,15 @@ public class AdminPanelServiceImpl implements AdminPanelService {
         foundTour.setImgUrl(tour.getImgUrl());
         tourRepository.save(foundTour);
         return tour;
+    }
+
+    @Override
+    public TourDto deleteTour(String name) {
+        Tour tourToDelete = tourRepository.findByName(name);
+        if (tourToDelete != null) {
+            tourRepository.delete(tourToDelete);
+        }
+        assert tourToDelete != null;
+        return modelConverter.convert(tourToDelete);
     }
 }

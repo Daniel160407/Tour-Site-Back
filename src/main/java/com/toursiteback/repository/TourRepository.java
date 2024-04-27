@@ -11,5 +11,8 @@ public interface TourRepository extends JpaRepository<Tour, Integer> {
     List<Tour> findAllBy();
 
     Tour save(Tour tour);
+
     Tour findByName(String name);
+
+    void delete(Tour tour);
 }

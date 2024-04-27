@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 public interface AdminPanelService {
     void login(Admin admin);
+
     TourDto addTour(TourWithImg tour);
+
     TourDto updateTour(TourDto tour);
+
+    TourDto deleteTour(String name);
 }

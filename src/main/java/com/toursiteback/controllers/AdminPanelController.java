@@ -2,7 +2,6 @@ package com.toursiteback.controllers;
 
 import com.toursiteback.dto.TourDto;
 import com.toursiteback.model.Admin;
-import com.toursiteback.model.Tour;
 import com.toursiteback.model.TourWithImg;
 import com.toursiteback.service.adminPanel.AdminPanelService;
 import com.toursiteback.service.exception.InvalidEmailOrPasswordException;
@@ -57,12 +56,18 @@ public class AdminPanelController {
 
     @PutMapping
     @ResponseBody
-    public TourDto updateTour(@RequestBody TourDto tour){
+    public TourDto updateTour(@RequestBody TourDto tour) {
         return adminPanelService.updateTour(tour);
+    }
+
+    @DeleteMapping
+    @ResponseBody
+    public TourDto deleteTour(@RequestParam String name) {
+        return adminPanelService.deleteTour(name);
     }
 
     @RequestMapping(method = RequestMethod.OPTIONS)
     public ResponseEntity<?> handleOptions() {
-        return ResponseEntity.ok().allow(HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.OPTIONS).build();
+        return ResponseEntity.ok().allow(HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE, HttpMethod.OPTIONS).build();
     }
 }
