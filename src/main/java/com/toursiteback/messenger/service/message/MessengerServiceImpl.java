@@ -7,6 +7,8 @@ import com.toursiteback.util.ModelConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MessengerServiceImpl implements MessengerService {
     private final MessageRepository messageRepository;
@@ -21,6 +23,11 @@ public class MessengerServiceImpl implements MessengerService {
     @Override
     public MessageDto saveMessage(Message message) {
         System.out.println(message);
-        return modelConverter.convert(messageRepository.save(message));
+        return ModelConverter.convert(messageRepository.save(message));
+    }
+
+    @Override
+    public List<MessageDto> getMessages(String email) {
+        return modelConverter.convertMessagesToDtoList(messageRepository.findAllBySenderEmail(email));
     }
 }

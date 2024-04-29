@@ -9,6 +9,7 @@ import com.toursiteback.messenger.repository.UsersRepository;
 import com.toursiteback.messenger.service.message.MessengerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
@@ -36,7 +37,12 @@ public class MessengerEndpoint extends TextWebSocketHandler {
 
         sessions.add(session);
         System.out.println(session);
-        session.sendMessage(new TextMessage(objectMapper.writeValueAsString(new MessageDto("server", "0", session.getId()))));
+        session.sendMessage(new TextMessage(objectMapper.writeValueAsString(new MessageDto("server", session.getId()))));
+    }
+
+    @Override
+    public void afterConnectionClosed(WebSocketSession session, CloseStatus status) {
+        sessions.remove(session);
     }
 
     @Override
@@ -55,8 +61,9 @@ public class MessengerEndpoint extends TextWebSocketHandler {
                 }
             }
         } else {
+            User client = usersRepository.getUserByEmail(message.getReceiverEmail());
             for (WebSocketSession receiverSession : sessions) {
-                if (receiverSession.getId().equals(message.getReceiver())) {
+                if (receiverSession.getId().equals(client.getSid())) {
                     receiverSession.sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
                 }
             }

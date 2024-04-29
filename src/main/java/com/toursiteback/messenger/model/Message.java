@@ -14,6 +14,10 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
+    @Column(name = "sender_email")
+    private String senderEmail;
+    @Column(name = "receiver_email")
+    private String receiverEmail;
     @Column(name = "sender")
     private String sender;
     @Column(name = "receiver")

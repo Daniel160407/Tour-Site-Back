@@ -96,15 +96,24 @@ public class ModelConverter {
                 .build();
     }
 
-    public MessageDto convert(Message message) {
+    public static MessageDto convert(Message message) {
         return MessageDto.builder()
+                .senderEmail(message.getSenderEmail())
+                .receiverEmail(message.getReceiverEmail())
                 .sender(message.getSender())
                 .receiver(message.getReceiver())
                 .message(message.getMessage())
                 .build();
     }
+
     public List<UserDto> convertUsersToDtoList(List<User> userList) {
         return userList.stream()
+                .map(ModelConverter::convert)
+                .collect(Collectors.toList());
+    }
+
+    public List<MessageDto> convertMessagesToDtoList(List<Message> messageList) {
+        return messageList.stream()
                 .map(ModelConverter::convert)
                 .collect(Collectors.toList());
     }

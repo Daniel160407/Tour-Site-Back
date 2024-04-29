@@ -21,7 +21,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto login(UserDto user) {
         User foundUser = userRepository.getUserByEmail(user.getEmail());
-        if (foundUser == null) {
+        if (foundUser != null) {
+            foundUser.setSid(user.getSid());
+            userRepository.save(foundUser);
+        } else {
             userRepository.save(modelConverter.convert(user));
             return user;
         }
