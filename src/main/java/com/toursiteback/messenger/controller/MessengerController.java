@@ -1,22 +1,20 @@
 package com.toursiteback.messenger.controller;
 
 import com.toursiteback.messenger.dto.UserDto;
-import com.toursiteback.messenger.service.users.MessengerServiceImpl;
+import com.toursiteback.messenger.service.users.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/tours/messenger")
+@CrossOrigin(origins = "*")
 public class MessengerController {
 
-    private final MessengerServiceImpl messengerService;
+    private final UserServiceImpl messengerService;
 
     @Autowired
-    public MessengerController(MessengerServiceImpl messengerService) {
+    public MessengerController(UserServiceImpl messengerService) {
         this.messengerService = messengerService;
     }
 

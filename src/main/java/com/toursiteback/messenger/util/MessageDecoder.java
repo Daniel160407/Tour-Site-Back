@@ -2,7 +2,7 @@ package com.toursiteback.messenger.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.toursiteback.messenger.message.Message;
+import com.toursiteback.messenger.model.Message;
 import jakarta.websocket.Decoder;
 
 public class MessageDecoder implements Decoder.Text<Message> {

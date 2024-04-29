@@ -2,7 +2,9 @@ package com.toursiteback.util;
 
 import com.toursiteback.dto.TourCollectionDto;
 import com.toursiteback.dto.TourDto;
+import com.toursiteback.messenger.dto.MessageDto;
 import com.toursiteback.messenger.dto.UserDto;
+import com.toursiteback.messenger.model.Message;
 import com.toursiteback.messenger.model.User;
 import com.toursiteback.model.Tour;
 import com.toursiteback.model.TourWithImg;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class ModelConverter {
@@ -75,7 +78,7 @@ public class ModelConverter {
                 .build();
     }
 
-    public UserDto convert(User user) {
+    public static UserDto convert(User user) {
         return UserDto.builder()
                 .name(user.getName())
                 .email(user.getEmail())
@@ -91,5 +94,18 @@ public class ModelConverter {
                 .password(userDto.getPassword())
                 .sid(userDto.getSid())
                 .build();
+    }
+
+    public MessageDto convert(Message message) {
+        return MessageDto.builder()
+                .sender(message.getSender())
+                .receiver(message.getReceiver())
+                .message(message.getMessage())
+                .build();
+    }
+    public List<UserDto> convertUsersToDtoList(List<User> userList) {
+        return userList.stream()
+                .map(ModelConverter::convert)
+                .collect(Collectors.toList());
     }
 }
