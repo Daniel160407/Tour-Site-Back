@@ -1,7 +1,6 @@
 package com.toursiteback.messenger.service.admin;
 
 import com.toursiteback.messenger.dto.UserDto;
-import com.toursiteback.messenger.model.User;
 import com.toursiteback.messenger.repository.UsersRepository;
 import com.toursiteback.util.ModelConverter;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,5 @@
 package com.toursiteback.util;
 
-import com.toursiteback.dto.TourCollectionDto;
 import com.toursiteback.dto.TourDto;
 import com.toursiteback.messenger.dto.MessageDto;
 import com.toursiteback.messenger.dto.UserDto;
@@ -16,15 +15,6 @@ import java.util.stream.Collectors;
 
 @Component
 public class ModelConverter {
-    public TourCollectionDto convertTours(List<Tour> tours) {
-        List<TourDto> tourDtos = tours.stream()
-                .map(this::convert)
-                .toList();
-
-        return TourCollectionDto.builder()
-                .tours(tourDtos)
-                .build();
-    }
 
     public TourDto convert(Tour tour) {
         return TourDto.builder()
@@ -44,17 +34,6 @@ public class ModelConverter {
             tourDtos.add(convert(tour));
         }
         return tourDtos;
-    }
-
-    public Tour convert(TourDto tourDto) {
-        return Tour.builder()
-                .name(tourDto.getName())
-                .description(tourDto.getDescription())
-                .direction(tourDto.getDirection())
-                .history(tourDto.getHistory())
-                .price(tourDto.getPrice())
-                .imgUrl(tourDto.getImgUrl())
-                .build();
     }
 
     public Tour convert(TourWithImg tour, String imgUrl) {

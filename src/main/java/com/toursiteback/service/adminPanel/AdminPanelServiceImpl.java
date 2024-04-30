@@ -7,7 +7,6 @@ import com.toursiteback.model.TourWithImg;
 import com.toursiteback.repository.TourRepository;
 import com.toursiteback.service.exception.InvalidEmailOrPasswordException;
 import com.toursiteback.util.ModelConverter;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

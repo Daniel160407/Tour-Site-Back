@@ -27,13 +27,12 @@ public class TourServiceImpl implements TourService {
     public TourCollectionDto getTours() {
         List<TourDto> tours = modelConverter.convert(tourRepository.findAllBy());
 
-        // Populate the imageData field for each tour
         tours.forEach(tour -> {
             try {
                 byte[] imageData = getImageData(tour.getImgUrl());
                 tour.setImageData(imageData);
             } catch (IOException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         });
 

@@ -1,7 +1,6 @@
 package com.toursiteback.messenger.service.message;
 
 import com.toursiteback.messenger.dto.MessageDto;
-import com.toursiteback.messenger.model.Message;
 import com.toursiteback.messenger.repository.MessageRepository;
 import com.toursiteback.util.ModelConverter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +17,6 @@ public class MessengerServiceImpl implements MessengerService {
     public MessengerServiceImpl(MessageRepository messageRepository, ModelConverter modelConverter) {
         this.messageRepository = messageRepository;
         this.modelConverter = modelConverter;
-    }
-
-    @Override
-    public MessageDto saveMessage(Message message) {
-        System.out.println(message);
-        return ModelConverter.convert(messageRepository.save(message));
     }
 
     @Override
