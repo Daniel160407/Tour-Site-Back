@@ -10,6 +10,7 @@ Technologies Used
 - **MySQL**: Storing tour information and user data.
 - **JPA (Java Persistence API)**: Managing database interactions and entity mapping.
 - **Flyway Database Manager**: Handling database migrations and version control.
+- **WebSocket**: Enabling real-time communication for dynamic updates.
 
 What I Learned
 --------------
