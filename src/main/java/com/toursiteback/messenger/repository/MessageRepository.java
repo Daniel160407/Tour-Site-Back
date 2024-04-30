@@ -10,5 +10,5 @@ import java.util.List;
 public interface MessageRepository extends JpaRepository<Message, Integer> {
     Message save(Message message);
 
-    List<Message> findAllBySenderEmail(String senderEmail);
+    List<Message> findAllBySenderEmailOrReceiverEmail(String senderEmail, String receiverEmail);
 }

@@ -28,6 +28,6 @@ public class MessengerServiceImpl implements MessengerService {
 
     @Override
     public List<MessageDto> getMessages(String email) {
-        return modelConverter.convertMessagesToDtoList(messageRepository.findAllBySenderEmail(email));
+        return modelConverter.convertMessagesToDtoList(messageRepository.findAllBySenderEmailOrReceiverEmail(email,email));
     }
 }
