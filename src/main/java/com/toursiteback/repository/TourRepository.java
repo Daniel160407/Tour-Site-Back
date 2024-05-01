@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface TourRepository extends JpaRepository<Tour, Integer> {
-    List<Tour> findAllBy();
+    List<Tour> findAllByLanguage(String language);
 
     Tour save(Tour tour);
 

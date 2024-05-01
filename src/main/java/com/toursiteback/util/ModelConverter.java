@@ -23,6 +23,7 @@ public class ModelConverter {
                 .direction(tour.getDirection())
                 .history(tour.getHistory())
                 .price(tour.getPrice())
+                .language(tour.getLanguage())
                 .imgUrl(tour.getImgUrl())
                 .build();
     }
@@ -43,6 +44,7 @@ public class ModelConverter {
                 .direction(tour.getDirection())
                 .history(tour.getHistory())
                 .price(tour.getPrice())
+                .language(tour.getLanguage())
                 .imgUrl(imgUrl)
                 .build();
     }
@@ -54,6 +56,7 @@ public class ModelConverter {
                 .direction(tour.getDirection())
                 .history(tour.getHistory())
                 .price(tour.getPrice())
+                .language(tour.getLanguage())
                 .build();
     }
 

@@ -11,6 +11,7 @@ public class TourDto {
     private String direction;
     private String history;
     private String price;
+    private String language;
     private String imgUrl;
     private byte[] imageData;
 }

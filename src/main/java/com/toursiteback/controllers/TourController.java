@@ -4,10 +4,7 @@ import com.toursiteback.dto.TourCollectionDto;
 import com.toursiteback.service.tour.TourService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/tours/tour")
@@ -22,7 +19,7 @@ public class TourController {
 
     @GetMapping
     @ResponseBody
-    public TourCollectionDto getTours() {
-        return tourService.getTours();
+    public TourCollectionDto getTours(@RequestParam String language) {
+        return tourService.getTours(language);
     }
 }

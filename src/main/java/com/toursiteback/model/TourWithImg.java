@@ -12,5 +12,6 @@ public class TourWithImg {
     private String direction;
     private String history;
     private String price;
+    private String language;
     private MultipartFile image;
 }

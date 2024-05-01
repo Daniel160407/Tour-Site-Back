@@ -36,7 +36,6 @@ public class MessengerEndpoint extends TextWebSocketHandler {
         super.afterConnectionEstablished(session);
 
         sessions.add(session);
-        System.out.println(session);
         session.sendMessage(new TextMessage(objectMapper.writeValueAsString(new MessageDto("server", session.getId()))));
     }
 
@@ -49,7 +48,6 @@ public class MessengerEndpoint extends TextWebSocketHandler {
     protected void handleTextMessage(WebSocketSession session, TextMessage textMessage) throws Exception {
         super.handleTextMessage(session, textMessage);
         String payload = textMessage.getPayload();
-        System.out.println(payload);
 
         Message message = objectMapper.readValue(payload, Message.class);
 

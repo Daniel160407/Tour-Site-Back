@@ -5,5 +5,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface TourService {
-    TourCollectionDto getTours();
+    TourCollectionDto getTours(String language);
 }

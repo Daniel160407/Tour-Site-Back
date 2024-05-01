@@ -26,6 +26,8 @@ public class Tour {
     private String history;
     @Column(name = "price")
     private String price;
+    @Column(name = "language")
+    private String language;
     @Column(name = "img_url")
     private String imgUrl;
 }

@@ -24,8 +24,8 @@ public class TourServiceImpl implements TourService {
     }
 
     @Override
-    public TourCollectionDto getTours() {
-        List<TourDto> tours = modelConverter.convert(tourRepository.findAllBy());
+    public TourCollectionDto getTours(String language) {
+        List<TourDto> tours = modelConverter.convert(tourRepository.findAllByLanguage(language));
 
         tours.forEach(tour -> {
             try {

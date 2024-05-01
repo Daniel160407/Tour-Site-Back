@@ -40,6 +40,7 @@ public class AdminPanelController {
                            @RequestPart("direction") String direction,
                            @RequestPart("history") String history,
                            @RequestPart("price") String price,
+                           @RequestPart("language") String language,
                            @RequestPart("image") MultipartFile image) {
 
         return adminPanelService.addTour(
@@ -49,6 +50,7 @@ public class AdminPanelController {
                         .direction(direction)
                         .history(history)
                         .price(price)
+                        .language(language)
                         .image(image)
                         .build()
         );
