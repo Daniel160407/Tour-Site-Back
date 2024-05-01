@@ -10,6 +10,7 @@ import com.toursiteback.util.ModelConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -66,10 +67,13 @@ public class AdminPanelServiceImpl implements AdminPanelService {
     @Override
     public TourDto deleteTour(String name) {
         Tour tourToDelete = tourRepository.findByName(name);
-        if (tourToDelete != null) {
-            tourRepository.delete(tourToDelete);
+        File file = new File(tourToDelete.getImgUrl());
+
+        if (file.exists()) {
+            file.delete();
         }
-        assert tourToDelete != null;
+
+        tourRepository.delete(tourToDelete);
         return modelConverter.convert(tourToDelete);
     }
 }
