@@ -6,7 +6,6 @@ import com.toursiteback.messenger.model.Message;
 import com.toursiteback.messenger.model.User;
 import com.toursiteback.messenger.repository.MessageRepository;
 import com.toursiteback.messenger.repository.UsersRepository;
-import org.antlr.v4.runtime.misc.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;

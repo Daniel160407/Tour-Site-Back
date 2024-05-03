@@ -20,8 +20,9 @@ public class PageController {
         return "index.html";
     }
 
-    @GetMapping(value = "{path:[^\\.]*}")
+    @GetMapping(value = "{path:(?!messenger)[^\\.]*}")
     public String redirectToIndex() {
         return "index.html";
     }
+
 }

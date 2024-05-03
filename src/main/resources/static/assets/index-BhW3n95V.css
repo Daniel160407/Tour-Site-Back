@@ -84,10 +84,6 @@ footer a:hover {
     box-shadow: 0 0 10px #0000001a
 }
 
-#tours {
-    padding: 20px
-}
-
 #add {
     padding: 10px 20px;
     background-color: #007bff;
@@ -300,24 +296,22 @@ footer a:hover {
     background-color: #c00
 }
 
-#addTours {
-    padding: 20px;
-    background-color: #ffffff80;
-    border-radius: 10px
+#tours {
+    padding: 20px
 }
 
-#addTours #arrow {
+#tours #arrow {
     width: 20px
 }
 
-#addTours h1 {
+#tours h1 {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px
 }
 
-#addTours input[type=text] {
+#tours input[type=text] {
     width: 100%;
     height: 40px;
     margin-bottom: 20px;
@@ -327,7 +321,7 @@ footer a:hover {
     font-size: 16px
 }
 
-#addTours textarea {
+#tours textarea {
     width: 100%;
     height: 100px;
     margin-bottom: 20px;
@@ -338,7 +332,7 @@ footer a:hover {
     resize: vertical
 }
 
-#addTours input[type=submit] {
+#tours input[type=submit] {
     width: 100%;
     height: 40px;
     margin-top: 20px;
@@ -350,15 +344,15 @@ footer a:hover {
     cursor: pointer
 }
 
-#addTours input[type=text] + input[type=text] {
+#tours input[type=text] + input[type=text] {
     margin-top: 20px
 }
 
-#addTours input[type=text]:focus, #addTours textarea:focus {
+#tours input[type=text]:focus, #tours textarea:focus {
     box-shadow: 0 0 10px #0000001a
 }
 
-#addTours input[type=file] {
+#tours input[type=file] {
     margin-left: 10px;
     border: 1px solid #ccc;
     padding: 10px;
@@ -371,13 +365,14 @@ footer a:hover {
     cursor: pointer
 }
 
-#addTours input[type=file]:hover {
+#tours input[type=file]:hover {
     background-color: #f0f0f0
 }
 
 .contacts-list {
     display: flex;
     flex-direction: column;
+    width: 500px;
     overflow-y: scroll
 }
 
@@ -385,7 +380,7 @@ footer a:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px;
+    margin-bottom: 10px;
     width: 300px;
     box-shadow: 0 2px 4px #0000001a;
     transition: transform .2s;
@@ -420,6 +415,23 @@ footer a:hover {
 }
 
 .chat-container .name {
+    display: flex;
+    justify-content: center
+}
+
+.admin-chat-container {
+    bottom: 0;
+    right: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff80;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0000001a;
+    display: flex;
+    flex-direction: column
+}
+
+.admin-chat-container .name {
     display: flex;
     justify-content: center
 }
@@ -460,11 +472,13 @@ footer a:hover {
 }
 
 #contact {
-    height: 90%;
-    width: 100%
+    gap: 20px;
+    height: 90%
 }
 
 #chat {
+    display: flex;
+    width: 100%;
     height: 100%;
     gap: 20px
 }
@@ -523,7 +537,7 @@ select option:hover {
     padding: 20px;
     border-radius: 5px;
     width: 100%;
-    min-height: 100vh;
+    height: 700px;
     display: flex;
     flex-direction: column
 }
