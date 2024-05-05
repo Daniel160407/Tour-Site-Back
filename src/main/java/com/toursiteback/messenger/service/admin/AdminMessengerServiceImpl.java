@@ -3,6 +3,7 @@ package com.toursiteback.messenger.service.admin;
 import com.toursiteback.messenger.dto.UserDto;
 import com.toursiteback.messenger.repository.UsersRepository;
 import com.toursiteback.util.ModelConverter;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +23,11 @@ public class AdminMessengerServiceImpl implements AdminMessengerService {
     @Override
     public List<UserDto> getUsers() {
         return modelConverter.convertUsersToDtoList(usersRepository.findAllByExceptAdmin());
+    }
+
+    @Override
+    @Transactional
+    public void deleteUser(String email) {
+        usersRepository.deleteUserByEmail(email);
     }
 }

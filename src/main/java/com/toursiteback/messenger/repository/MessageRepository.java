@@ -11,4 +11,6 @@ public interface MessageRepository extends JpaRepository<Message, Integer> {
     Message save(Message message);
 
     List<Message> findAllBySenderEmailOrReceiverEmail(String senderEmail, String receiverEmail);
+
+    void deleteAllBySenderEmailOrReceiverEmail(String senderEmail, String receiverEmail);
 }

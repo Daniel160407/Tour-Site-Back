@@ -1,5 +1,5 @@
 html {
-    height: 100%
+    min-height: 100vh
 }
 
 body {
@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Prompt, sans-serif;
-    min-height: 100vh
+    height: 100%
 }
 
 @font-face {
@@ -104,6 +104,7 @@ footer a:hover {
 }
 
 #toursList {
+    padding-top: 20px;
     display: grid;
     grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px
@@ -296,22 +297,22 @@ footer a:hover {
     background-color: #c00
 }
 
-#tours {
+#addTours {
     padding: 20px
 }
 
-#tours #arrow {
+#addTours #arrow {
     width: 20px
 }
 
-#tours h1 {
+#addTours h1 {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px
 }
 
-#tours input[type=text] {
+#addTours input[type=text] {
     width: 100%;
     height: 40px;
     margin-bottom: 20px;
@@ -321,7 +322,7 @@ footer a:hover {
     font-size: 16px
 }
 
-#tours textarea {
+#addTours textarea {
     width: 100%;
     height: 100px;
     margin-bottom: 20px;
@@ -332,7 +333,7 @@ footer a:hover {
     resize: vertical
 }
 
-#tours input[type=submit] {
+#addTours input[type=submit] {
     width: 100%;
     height: 40px;
     margin-top: 20px;
@@ -344,15 +345,15 @@ footer a:hover {
     cursor: pointer
 }
 
-#tours input[type=text] + input[type=text] {
+#addTours input[type=text] + input[type=text] {
     margin-top: 20px
 }
 
-#tours input[type=text]:focus, #tours textarea:focus {
+#addTours input[type=text]:focus, #addTours textarea:focus {
     box-shadow: 0 0 10px #0000001a
 }
 
-#tours input[type=file] {
+#addTours input[type=file] {
     margin-left: 10px;
     border: 1px solid #ccc;
     padding: 10px;
@@ -365,115 +366,115 @@ footer a:hover {
     cursor: pointer
 }
 
-#tours input[type=file]:hover {
+#addTours input[type=file]:hover {
     background-color: #f0f0f0
 }
 
 .contacts-list {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    overflow-y: scroll
-}
-
-.contact {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    overflow-y: auto;
+    max-height: 300px;
     padding: 10px;
-    margin-bottom: 10px;
-    width: 300px;
-    box-shadow: 0 2px 4px #0000001a;
-    transition: transform .2s;
-    background-color: #ffffff80
+    height: 700px;
+    width: 30%
 }
 
-.contact:hover {
-    transform: scale(1.05)
-}
-
-.contact p {
-    margin: 0;
-    padding: 5px
-}
-
-.contact p:first-child {
-    font-weight: 700;
-    font-size: 1.2em;
-    color: #333
-}
-
-.chat-container {
-    bottom: 0;
-    right: 20px;
-    width: 100%;
-    height: 100%;
+.contacts-list .contact {
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
     background-color: #ffffff80;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px #0000001a;
-    display: flex;
-    flex-direction: column
+    padding: 20px;
+    margin-top: 10px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex
 }
 
-.chat-container .name {
+.contacts-list .contact:hover {
+    background-color: #f5f5f5
+}
+
+.contacts-list .contact p {
+    margin: 0
+}
+
+.contacts-list .contact .delete {
+    width: 100%;
     display: flex;
-    justify-content: center
+    justify-content: end
+}
+
+.contacts-list .contact .delete img {
+    width: 20px
+}
+
+.contacts-list .contact:last-child {
+    border-bottom: none
 }
 
 .admin-chat-container {
-    bottom: 0;
-    right: 20px;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff80;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px #0000001a;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    background-color: #ffffff80;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #0000001a;
+    overflow: hidden
 }
 
 .admin-chat-container .name {
-    display: flex;
-    justify-content: center
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.2rem
 }
 
-.messages-container {
+.admin-chat-container .messages-container {
     flex: 1;
     overflow-y: scroll;
-    padding: 10px
+    scroll-behavior: smooth;
+    margin-bottom: 10px
 }
 
-.message {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 8px 12px;
-    margin-bottom: 8px;
+.admin-chat-container .messages-container .message {
     max-width: 70%;
-    align-self: flex-end;
-    box-shadow: 0 2px 4px #0000001a
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 5px 0;
+    background-color: #80808080
 }
 
-.message.received {
+.admin-chat-container .messages-container .received {
     align-self: flex-start
 }
 
-#messageInput {
-    flex: 0 0 auto;
-    padding: 10px;
-    border: none;
-    border-top: 1px solid #ccc;
-    border-radius: 0 0 8px 8px;
-    outline: none;
-    font-size: 14px;
-    color: #333
+.admin-chat-container .messages-container .sent {
+    align-self: flex-end
 }
 
-#messageInput:focus {
+.admin-chat-container .messages-container p {
+    margin: 0
+}
+
+.admin-chat-container input[type=text] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    font-size: 1rem
+}
+
+.admin-chat-container input[type=text]:focus {
+    outline: none;
     border-color: #007bff
 }
 
 #contact {
     gap: 20px;
-    height: 90%
+    min-height: 700px
 }
 
 #chat {
@@ -537,7 +538,8 @@ select option:hover {
     padding: 20px;
     border-radius: 5px;
     width: 100%;
-    height: 700px;
+    min-height: 700px;
+    max-height: 2000vw;
     display: flex;
     flex-direction: column
 }
@@ -597,66 +599,51 @@ select option:hover {
     width: 50px
 }
 
-.chat-endpoint-container {
+.chat-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
-    font-family: Arial, sans-serif
+    font-family: Arial, sans-serif;
+    background-color: #ffffff80;
+    border-radius: 10px;
+    padding: 20px
 }
 
-.message-container {
-    width: 80%;
+.chat-container .messages-container {
+    width: 100%;
     max-width: 600px;
-    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 20px;
     overflow-y: auto;
-    height: 60vh
+    flex: 1
 }
 
-.message {
-    background-color: #f9f9f9;
+.chat-container .messages-container .message {
+    background-color: #80808080;
+    max-width: 70%;
+    padding: 8px 12px;
     border-radius: 8px;
-    padding: 8px;
-    margin-bottom: 5px
+    margin: 5px 0
 }
 
-.message.sent {
-    align-self: flex-end;
-    background-color: #007bff;
-    color: #fff
+.chat-container .input-container {
+    display: flex;
+    width: 100%;
+    align-items: center
 }
 
-.message.received {
-    align-self: flex-start;
-    background-color: #f9f9f9;
-    color: #333
-}
-
-#messageInput {
-    width: calc(100% - 70px);
+.chat-container .input-container input {
+    flex: 1;
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    margin-right: 10px;
-    font-size: 14px
-}
-
-button {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
     font-size: 14px;
-    cursor: pointer
-}
-
-button:hover {
-    background-color: #0056b3
+    margin-right: 10px;
+    width: 200px
 }
 
 .received {
