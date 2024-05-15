@@ -5,6 +5,7 @@ import com.toursiteback.repository.FeedbacksRepository;
 import com.toursiteback.util.ModelConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -27,6 +28,13 @@ public class FeedbackServiceImpl implements FeedbackService {
     @Override
     public List<FeedbackDto> addFeedback(FeedbackDto feedbackDto) {
         feedbacksRepository.save(modelConverter.convert(feedbackDto));
+        return modelConverter.convertFeedbacksToDtoList(feedbacksRepository.getAllBy());
+    }
+
+    @Override
+    @Transactional
+    public List<FeedbackDto> deleteFeedback(String comment) {
+        feedbacksRepository.deleteByComment(comment);
         return modelConverter.convertFeedbacksToDtoList(feedbacksRepository.getAllBy());
     }
 }

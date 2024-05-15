@@ -9,4 +9,5 @@ import java.util.List;
 public interface FeedbackService {
     List<FeedbackDto> getAllFeedbacks();
     List<FeedbackDto> addFeedback(FeedbackDto feedbackDto);
+    List<FeedbackDto> deleteFeedback(String comment);
 }

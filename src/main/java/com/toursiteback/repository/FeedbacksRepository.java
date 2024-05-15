@@ -10,4 +10,5 @@ import java.util.List;
 public interface FeedbacksRepository extends JpaRepository<Feedback, Integer> {
     List<Feedback> getAllBy();
     Feedback save(Feedback feedback);
+    void deleteByComment(String comment);
 }

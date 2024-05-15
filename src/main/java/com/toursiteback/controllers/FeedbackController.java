@@ -3,6 +3,8 @@ package com.toursiteback.controllers;
 import com.toursiteback.dto.FeedbackDto;
 import com.toursiteback.service.feedback.FeedbackService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,5 +31,16 @@ public class FeedbackController {
     @ResponseBody
     public List<FeedbackDto> addFeedback(@RequestBody FeedbackDto feedbackDto) {
         return feedbackService.addFeedback(feedbackDto);
+    }
+
+    @DeleteMapping
+    @ResponseBody
+    public List<FeedbackDto> deleteFeedback(@RequestParam String comment){
+        return feedbackService.deleteFeedback(comment);
+    }
+
+    @RequestMapping(method = RequestMethod.OPTIONS)
+    public ResponseEntity<?> handleOptions() {
+        return ResponseEntity.ok().allow(HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE, HttpMethod.OPTIONS).build();
     }
 }
