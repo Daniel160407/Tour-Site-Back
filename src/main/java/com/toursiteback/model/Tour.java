@@ -24,6 +24,8 @@ public class Tour {
     private String direction;
     @Column(name = "history")
     private String history;
+    @Column(name = "requirements")
+    private String requirements;
     @Column(name = "price")
     private String price;
     @Column(name = "language")

@@ -39,6 +39,7 @@ public class AdminPanelController {
                            @RequestPart("description") String description,
                            @RequestPart("direction") String direction,
                            @RequestPart("history") String history,
+                           @RequestPart("requirements") String requirements,
                            @RequestPart("price") String price,
                            @RequestPart("language") String language,
                            @RequestPart("image") MultipartFile image) {
@@ -49,6 +50,7 @@ public class AdminPanelController {
                         .description(description)
                         .direction(direction)
                         .history(history)
+                        .requirements(requirements)
                         .price(price)
                         .language(language)
                         .image(image)
