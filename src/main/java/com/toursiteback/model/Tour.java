@@ -22,6 +22,8 @@ public class Tour {
     private String description;
     @Column(name = "direction")
     private String direction;
+    @Column(name = "duration")
+    private String duration;
     @Column(name = "history")
     private String history;
     @Column(name = "requirements")

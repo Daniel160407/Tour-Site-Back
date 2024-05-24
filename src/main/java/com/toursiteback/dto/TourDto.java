@@ -9,6 +9,7 @@ public class TourDto {
     private String name;
     private String description;
     private String direction;
+    private String duration;
     private String history;
     private String requirements;
     private String price;

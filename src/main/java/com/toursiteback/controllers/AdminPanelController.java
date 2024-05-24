@@ -38,6 +38,7 @@ public class AdminPanelController {
     public TourDto addTour(@RequestPart("title") String title,
                            @RequestPart("description") String description,
                            @RequestPart("direction") String direction,
+                           @RequestPart("duration") String duration,
                            @RequestPart("history") String history,
                            @RequestPart("requirements") String requirements,
                            @RequestPart("price") String price,
@@ -49,6 +50,7 @@ public class AdminPanelController {
                         .name(title)
                         .description(description)
                         .direction(direction)
+                        .duration(duration)
                         .history(history)
                         .requirements(requirements)
                         .price(price)

@@ -57,6 +57,7 @@ public class AdminPanelServiceImpl implements AdminPanelService {
         foundTour.setName(tour.getName());
         foundTour.setDescription(tour.getDescription());
         foundTour.setDirection(tour.getDirection());
+        foundTour.setDuration(tour.getDuration());
         foundTour.setHistory(tour.getHistory());
         foundTour.setRequirements(tour.getRequirements());
         foundTour.setPrice(tour.getPrice());
