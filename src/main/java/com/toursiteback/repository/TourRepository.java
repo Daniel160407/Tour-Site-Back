@@ -10,6 +10,8 @@ import java.util.List;
 public interface TourRepository extends JpaRepository<Tour, Integer> {
     List<Tour> findAllByLanguage(String language);
 
+    List<Tour> findAllByNameStartingWith(String prefix);
+
     Tour save(Tour tour);
 
     Tour findByName(String name);

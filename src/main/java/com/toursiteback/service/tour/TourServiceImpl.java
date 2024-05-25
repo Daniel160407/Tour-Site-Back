@@ -41,6 +41,24 @@ public class TourServiceImpl implements TourService {
                 .build();
     }
 
+    @Override
+    public TourCollectionDto getSearchedTours(String prefix) {
+        List<TourDto> tours = modelConverter.convert(tourRepository.findAllByNameStartingWith(prefix));
+
+        tours.forEach(tour -> {
+            try {
+                byte[] imageData = getImageData(tour.getImgUrl());
+                tour.setImageData(imageData);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        return TourCollectionDto.builder()
+                .tours(tours)
+                .build();
+    }
+
     private byte[] getImageData(String imgUrl) throws IOException {
         Path imagePath = Path.of(imgUrl);
         return Files.readAllBytes(imagePath);

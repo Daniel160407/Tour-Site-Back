@@ -18,5 +18,7 @@ public interface UsersRepository extends JpaRepository<User, Integer> {
 
     User getUserByEmail(String email);
 
+    User getUserByEmailAndPassword(String email, String password);
+
     void deleteUserByEmail(String email);
 }

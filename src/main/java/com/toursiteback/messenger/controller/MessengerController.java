@@ -2,7 +2,10 @@ package com.toursiteback.messenger.controller;
 
 import com.toursiteback.messenger.dto.UserDto;
 import com.toursiteback.messenger.service.users.UserServiceImpl;
+import com.toursiteback.service.exception.InvalidEmailOrPasswordException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +23,11 @@ public class MessengerController {
 
     @PostMapping("/login")
     @ResponseBody
-    public UserDto login(@RequestBody UserDto user) {
-        return messengerService.login(user);
+    public ResponseEntity<UserDto> login(@RequestBody UserDto user) {
+        try {
+            return ResponseEntity.accepted().body(messengerService.login(user));
+        } catch (InvalidEmailOrPasswordException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
     }
 }

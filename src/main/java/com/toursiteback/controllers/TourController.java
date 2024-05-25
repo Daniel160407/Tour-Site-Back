@@ -22,4 +22,10 @@ public class TourController {
     public TourCollectionDto getTours(@RequestParam String language) {
         return tourService.getTours(language);
     }
+
+    @GetMapping("/search")
+    @ResponseBody
+    public TourCollectionDto getSearchedTours(@RequestParam String prefix) {
+        return tourService.getSearchedTours(prefix);
+    }
 }

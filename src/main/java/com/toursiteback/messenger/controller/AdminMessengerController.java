@@ -39,9 +39,10 @@ public class AdminMessengerController {
 
     @DeleteMapping
     @ResponseBody
-    public void deleteUser(@RequestParam String email) {
+    public List<UserDto> deleteUser(@RequestParam String email) {
         messengerService.deleteMessages(email);
         adminMessengerService.deleteUser(email);
+        return adminMessengerService.getUsers();
     }
 
     @RequestMapping(method = RequestMethod.OPTIONS)
