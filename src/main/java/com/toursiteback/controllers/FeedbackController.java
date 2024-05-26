@@ -4,6 +4,7 @@ import com.toursiteback.dto.FeedbackDto;
 import com.toursiteback.service.feedback.FeedbackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -23,20 +24,20 @@ public class FeedbackController {
 
     @GetMapping
     @ResponseBody
-    public List<FeedbackDto> getFeedbacks() {
-        return feedbackService.getAllFeedbacks();
+    public ResponseEntity<List<FeedbackDto>> getFeedbacks() {
+        return ResponseEntity.ok().body(feedbackService.getAllFeedbacks());
     }
 
     @PostMapping
     @ResponseBody
-    public List<FeedbackDto> addFeedback(@RequestBody FeedbackDto feedbackDto) {
-        return feedbackService.addFeedback(feedbackDto);
+    public ResponseEntity<List<FeedbackDto>> addFeedback(@RequestBody FeedbackDto feedbackDto) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(feedbackService.addFeedback(feedbackDto));
     }
 
     @DeleteMapping
     @ResponseBody
-    public List<FeedbackDto> deleteFeedback(@RequestParam String comment){
-        return feedbackService.deleteFeedback(comment);
+    public ResponseEntity<List<FeedbackDto>> deleteFeedback(@RequestParam String comment){
+        return ResponseEntity.ok().body(feedbackService.deleteFeedback(comment));
     }
 
     @RequestMapping(method = RequestMethod.OPTIONS)

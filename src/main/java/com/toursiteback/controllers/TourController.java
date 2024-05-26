@@ -3,6 +3,7 @@ package com.toursiteback.controllers;
 import com.toursiteback.dto.TourCollectionDto;
 import com.toursiteback.service.tour.TourService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,13 +20,13 @@ public class TourController {
 
     @GetMapping
     @ResponseBody
-    public TourCollectionDto getTours(@RequestParam String language) {
-        return tourService.getTours(language);
+    public ResponseEntity<TourCollectionDto> getTours(@RequestParam String language) {
+        return ResponseEntity.ok().body(tourService.getTours(language));
     }
 
     @GetMapping("/search")
     @ResponseBody
-    public TourCollectionDto getSearchedTours(@RequestParam String prefix) {
-        return tourService.getSearchedTours(prefix);
+    public ResponseEntity<TourCollectionDto> getSearchedTours(@RequestParam String prefix) {
+        return ResponseEntity.ok().body(tourService.getSearchedTours(prefix));
     }
 }

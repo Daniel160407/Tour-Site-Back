@@ -27,22 +27,22 @@ public class AdminMessengerController {
 
     @GetMapping
     @ResponseBody
-    public List<UserDto> getUsers() {
-        return adminMessengerService.getUsers();
+    public ResponseEntity<List<UserDto>> getUsers() {
+        return ResponseEntity.ok().body(adminMessengerService.getUsers());
     }
 
     @GetMapping("/messages")
     @ResponseBody
-    public List<MessageDto> getMessages(@RequestParam String email) {
-        return messengerService.getMessages(email);
+    public ResponseEntity<List<MessageDto>> getMessages(@RequestParam String email) {
+        return ResponseEntity.ok().body(messengerService.getMessages(email));
     }
 
     @DeleteMapping
     @ResponseBody
-    public List<UserDto> deleteUser(@RequestParam String email) {
+    public ResponseEntity<List<UserDto>> deleteUser(@RequestParam String email) {
         messengerService.deleteMessages(email);
         adminMessengerService.deleteUser(email);
-        return adminMessengerService.getUsers();
+        return ResponseEntity.ok().body(adminMessengerService.getUsers());
     }
 
     @RequestMapping(method = RequestMethod.OPTIONS)

@@ -35,17 +35,17 @@ public class AdminPanelController {
 
     @PostMapping
     @ResponseBody
-    public TourDto addTour(@RequestPart("title") String title,
-                           @RequestPart("description") String description,
-                           @RequestPart("direction") String direction,
-                           @RequestPart("duration") String duration,
-                           @RequestPart("history") String history,
-                           @RequestPart("requirements") String requirements,
-                           @RequestPart("price") String price,
-                           @RequestPart("language") String language,
-                           @RequestPart("image") MultipartFile image) {
+    public ResponseEntity<TourDto> addTour(@RequestPart("title") String title,
+                                           @RequestPart("description") String description,
+                                           @RequestPart("direction") String direction,
+                                           @RequestPart("duration") String duration,
+                                           @RequestPart("history") String history,
+                                           @RequestPart("requirements") String requirements,
+                                           @RequestPart("price") String price,
+                                           @RequestPart("language") String language,
+                                           @RequestPart("image") MultipartFile image) {
 
-        return adminPanelService.addTour(
+        return ResponseEntity.status(HttpStatus.CREATED).body(adminPanelService.addTour(
                 TourWithImg.builder()
                         .name(title)
                         .description(description)
@@ -57,19 +57,19 @@ public class AdminPanelController {
                         .language(language)
                         .image(image)
                         .build()
-        );
+        ));
     }
 
     @PutMapping
     @ResponseBody
-    public TourDto updateTour(@RequestBody TourDto tour) {
-        return adminPanelService.updateTour(tour);
+    public ResponseEntity<TourDto> updateTour(@RequestBody TourDto tour) {
+        return ResponseEntity.ok().body(adminPanelService.updateTour(tour));
     }
 
     @DeleteMapping
     @ResponseBody
-    public TourDto deleteTour(@RequestParam String name) {
-        return adminPanelService.deleteTour(name);
+    public ResponseEntity<TourDto> deleteTour(@RequestParam String name) {
+        return ResponseEntity.ok().body(adminPanelService.deleteTour(name));
     }
 
     @RequestMapping(method = RequestMethod.OPTIONS)
