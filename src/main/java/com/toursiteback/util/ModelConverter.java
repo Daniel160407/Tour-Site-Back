@@ -1,5 +1,6 @@
 package com.toursiteback.util;
 
+import com.toursiteback.dto.CountryDto;
 import com.toursiteback.dto.FeedbackDto;
 import com.toursiteback.dto.StateDto;
 import com.toursiteback.dto.TourDto;
@@ -7,10 +8,7 @@ import com.toursiteback.messenger.dto.MessageDto;
 import com.toursiteback.messenger.dto.UserDto;
 import com.toursiteback.messenger.model.Message;
 import com.toursiteback.messenger.model.User;
-import com.toursiteback.model.Feedback;
-import com.toursiteback.model.State;
-import com.toursiteback.model.Tour;
-import com.toursiteback.model.TourWithImg;
+import com.toursiteback.model.*;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -133,5 +131,18 @@ public class ModelConverter {
                 .messages(state.getMessages())
                 .feedbacks(state.getFeedbacks())
                 .build();
+    }
+
+    public Country convert(CountryDto countryDto) {
+        return Country.builder()
+                .ip(countryDto.getIp())
+                .country(countryDto.getCountry())
+                .build();
+    }
+
+    public List<CountryDto> covertCountriesListToDto(List<Country> countries) {
+        List<CountryDto> countryDtos = new ArrayList<>();
+        countries.forEach(country -> countryDtos.add(new CountryDto(country.getIp(), country.getCountry())));
+        return countryDtos;
     }
 }
