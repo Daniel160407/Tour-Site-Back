@@ -50,21 +50,23 @@ public class MessengerEndpoint extends TextWebSocketHandler {
 
         Message message = objectMapper.readValue(payload, Message.class);
 
-        if (message.getReceiver().equals("Admin")) {
-            User admin = usersRepository.getUserByName("Admin");
-            for (WebSocketSession receiverSession : sessions) {
-                if (receiverSession.getId().equals(admin.getSid())) {
-                    receiverSession.sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
+        if (usersRepository.getUserByEmail(message.getSenderEmail()) != null) {
+            if (message.getReceiver().equals("Admin")) {
+                User admin = usersRepository.getUserByName("Admin");
+                for (WebSocketSession receiverSession : sessions) {
+                    if (receiverSession.getId().equals(admin.getSid())) {
+                        receiverSession.sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
+                    }
+                }
+            } else {
+                User client = usersRepository.getUserByEmail(message.getReceiverEmail());
+                for (WebSocketSession receiverSession : sessions) {
+                    if (receiverSession.getId().equals(client.getSid())) {
+                        receiverSession.sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
+                    }
                 }
             }
-        } else {
-            User client = usersRepository.getUserByEmail(message.getReceiverEmail());
-            for (WebSocketSession receiverSession : sessions) {
-                if (receiverSession.getId().equals(client.getSid())) {
-                    receiverSession.sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
-                }
-            }
+            this.messageRepository.save(message);
         }
-        this.messageRepository.save(message);
     }
 }
