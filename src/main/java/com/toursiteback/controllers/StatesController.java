@@ -30,4 +30,9 @@ public class StatesController {
         statesService.increaseClicks(clicks);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
+    @DeleteMapping
+    public ResponseEntity<StateDto> clearState(@RequestParam String state) {
+        return ResponseEntity.ok().body(statesService.clearState(state));
+    }
 }

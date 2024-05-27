@@ -60,4 +60,26 @@ public class StatesServiceImpl implements StatesService {
     public StateDto getStates() {
         return modelConverter.convert(Objects.requireNonNull(statesRepository.findById(1).orElse(null)));
     }
+
+    @Override
+    public StateDto clearState(String stateName) {
+        State state = statesRepository.findById(1).orElse(null);
+        assert state != null;
+        switch (stateName) {
+            case "time":
+                state.setTime("0");
+                break;
+            case "clicks":
+                state.setClicks(0);
+                break;
+            case "messages":
+                state.setMessages(0);
+                break;
+            case "feedbacks":
+                state.setFeedbacks(0);
+                break;
+        }
+        statesRepository.save(state);
+        return modelConverter.convert(state);
+    }
 }
