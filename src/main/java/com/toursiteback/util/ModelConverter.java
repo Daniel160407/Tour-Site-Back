@@ -1,12 +1,14 @@
 package com.toursiteback.util;
 
 import com.toursiteback.dto.FeedbackDto;
+import com.toursiteback.dto.StateDto;
 import com.toursiteback.dto.TourDto;
 import com.toursiteback.messenger.dto.MessageDto;
 import com.toursiteback.messenger.dto.UserDto;
 import com.toursiteback.messenger.model.Message;
 import com.toursiteback.messenger.model.User;
 import com.toursiteback.model.Feedback;
+import com.toursiteback.model.State;
 import com.toursiteback.model.Tour;
 import com.toursiteback.model.TourWithImg;
 import org.springframework.stereotype.Component;
@@ -121,6 +123,15 @@ public class ModelConverter {
                 .name(feedbackDto.getName())
                 .time(feedbackDto.getTime())
                 .comment(feedbackDto.getComment())
+                .build();
+    }
+
+    public StateDto convert(State state) {
+        return StateDto.builder()
+                .time(state.getTime())
+                .clicks(state.getClicks())
+                .messages(state.getMessages())
+                .feedbacks(state.getFeedbacks())
                 .build();
     }
 }
