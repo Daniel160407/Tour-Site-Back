@@ -1221,7 +1221,7 @@ Source: https://github.com/java-native-access/jna
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -2590,7 +2590,7 @@ The "Artistic License"
 
 Preamble
 
-The intent of this document is to state the conditions under which a
+The intent of this document is to statistic the conditions under which a
 Package may be copied, such that the Copyright Holder maintains some
 semblance of artistic control over the development of the package,
 while giving the users of the package the right to use and distribute
@@ -3930,7 +3930,7 @@ Source: hhttps://github.com/snowflakedb/snowflake-jdbc/blob/master/LICENSE.txt
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -4204,7 +4204,7 @@ Source: https://github.com/fusesource/jansi
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -4411,7 +4411,7 @@ Source: https://raw.githubusercontent.com/google/gson/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -4524,9 +4524,9 @@ Source: https://raw.githubusercontent.com/google/gson/master/LICENSE
 
    8. ENTIRE AGREEMENT. This agreement, and any other terms Microsoft may provide for supplements, updates, or third-party applications, is the entire agreement for the software.
 
-   9. APPLICABLE LAW AND PLACE TO RESOLVE DISPUTES. If you acquired the software in the United States or Canada, the laws of the state or province where you live (or, if a business, where your principal place of business is located) govern the interpretation of this agreement, claims for its breach, and all other claims (including consumer protection, unfair competition, and tort claims), regardless of conflict of laws principles. If you acquired the software in any other country, its laws apply. If U.S. federal jurisdiction exists, you and Microsoft consent to exclusive jurisdiction and venue in the federal court in King County, Washington for all disputes heard in court. If not, you and Microsoft consent to exclusive jurisdiction and venue in the Superior Court of King County, Washington for all disputes heard in court.
+   9. APPLICABLE LAW AND PLACE TO RESOLVE DISPUTES. If you acquired the software in the United States or Canada, the laws of the statistic or province where you live (or, if a business, where your principal place of business is located) govern the interpretation of this agreement, claims for its breach, and all other claims (including consumer protection, unfair competition, and tort claims), regardless of conflict of laws principles. If you acquired the software in any other country, its laws apply. If U.S. federal jurisdiction exists, you and Microsoft consent to exclusive jurisdiction and venue in the federal court in King County, Washington for all disputes heard in court. If not, you and Microsoft consent to exclusive jurisdiction and venue in the Superior Court of King County, Washington for all disputes heard in court.
 
-   10. CONSUMER RIGHTS; REGIONAL VARIATIONS. This agreement describes certain legal rights. You may have other rights, including consumer rights, under the laws of your state or country. Separate and apart from your relationship with Microsoft, you may also have rights with respect to the party from which you acquired the software. This agreement does not change those other rights if the laws of your state or country do not permit it to do so. For example, if you acquired the software in one of the below regions, or mandatory country law applies, then the following provisions apply to you:
+   10. CONSUMER RIGHTS; REGIONAL VARIATIONS. This agreement describes certain legal rights. You may have other rights, including consumer rights, under the laws of your statistic or country. Separate and apart from your relationship with Microsoft, you may also have rights with respect to the party from which you acquired the software. This agreement does not change those other rights if the laws of your statistic or country do not permit it to do so. For example, if you acquired the software in one of the below regions, or mandatory country law applies, then the following provisions apply to you:
    	a) Australia. You have statutory guarantees under the Australian Consumer Law and nothing in this agreement is intended to affect those rights.
    	b) Canada. If you acquired this software in Canada, you may stop receiving updates by turning off the automatic update feature, disconnecting your device from the Internet (if and when you re-connect to the Internet, however, the software will resume checking for and installing updates), or uninstalling the software. The product documentation, if any, may also specify how to turn off updates for your specific device or software.
    	c) Germany and Austria.
@@ -4538,7 +4538,7 @@ Source: https://raw.githubusercontent.com/google/gson/master/LICENSE
 
    12. LIMITATION ON AND EXCLUSION OF DAMAGES. IF YOU HAVE ANY BASIS FOR RECOVERING DAMAGES DESPITE THE PRECEDING DISCLAIMER OF WARRANTY, YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT, OR INCIDENTAL DAMAGES.
    This limitation applies to (a) anything related to the software, services, content (including code) on third party Internet sites, or third party applications; and (b) claims for breach of contract, warranty, guarantee, or condition; strict liability, negligence, or other tort; or any other claim; in each case to the extent permitted by applicable law.
-   It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your state, province, or country may not allow the exclusion or limitation of incidental, consequential, or other damages.
+   It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your statistic, province, or country may not allow the exclusion or limitation of incidental, consequential, or other damages.
 
    Please note: As this software is distributed in Canada, some of the clauses in this agreement are provided below in French.
    Remarque: Ce logiciel étant distribué au Canada, certaines des clauses dans ce contrat sont fournies ci-dessous en français.
@@ -4709,7 +4709,7 @@ Source: https://github.com/FasterXML/jackson-databind/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -4915,7 +4915,7 @@ Source: https://github.com/FasterXML/jackson-core/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -5121,7 +5121,7 @@ Source: https://github.com/FasterXML/jackson-annotations/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -5353,7 +5353,7 @@ Source: https://bitbucket.org/connect2id/oauth-2.0-sdk-with-openid-connect-exten
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -5559,7 +5559,7 @@ Source: https://github.com/netplex/json-smart-v2/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -5765,7 +5765,7 @@ Source: https://github.com/netplex/json-smart-v2/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -6003,7 +6003,7 @@ Source: https://bitbucket.org/connect2id/nimbus-jose-jwt/src/master/LICENSE.txt
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -6209,7 +6209,7 @@ Source: http://stephenc.github.io/jcip-annotations/license.html
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -6415,7 +6415,7 @@ Source: https://bitbucket.org/connect2id/nimbus-language-tags/src/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -6621,7 +6621,7 @@ Source: https://bitbucket.org/connect2id/nimbus-content-type/src/master/LICENSE.
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -6854,7 +6854,7 @@ Source: https://www.apache.org/licenses/LICENSE-2.0.txt
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -7093,7 +7093,7 @@ Source: https://github.com/google/auto/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -7718,7 +7718,7 @@ Source: https://github.com/apache/commons-codec/blob/master/LICENSE.txt
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -7925,7 +7925,7 @@ Source: https://github.com/google/conscrypt/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -8132,7 +8132,7 @@ Source: https://www.apache.org/licenses/LICENSE-2.0.txt
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -8339,7 +8339,7 @@ Source: https://www.apache.org/licenses/LICENSE-2.0.txt
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -8675,7 +8675,7 @@ Source: https://github.com/googleapis/java-core/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -8881,7 +8881,7 @@ Source: https://github.com/googleapis/java-core/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -9087,7 +9087,7 @@ Source: https://github.com/googleapis/java-spanner/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -9293,7 +9293,7 @@ Source: https://github.com/googleapis/java-spanner/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -9499,7 +9499,7 @@ Source: https://github.com/googleapis/java-spanner/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -9705,7 +9705,7 @@ Source: https://github.com/googleapis/java-spanner/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -9911,7 +9911,7 @@ Source: https://github.com/googleapis/java-spanner/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -10117,7 +10117,7 @@ Source: https://github.com/googleapis/java-spanner/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -10323,7 +10323,7 @@ Source: https://github.com/googleapis/java-spanner/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -10529,7 +10529,7 @@ Source: https://github.com/googleapis/java-spanner/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -10735,7 +10735,7 @@ Source: https://github.com/googleapis/google-http-java-client/blob/master/LICENS
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -10941,7 +10941,7 @@ Source: https://github.com/googleapis/google-http-java-client/blob/master/LICENS
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -11148,7 +11148,7 @@ Source: https://github.com/grpc/grpc-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -11355,7 +11355,7 @@ Source: https://github.com/grpc/grpc-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -11562,7 +11562,7 @@ Source: https://github.com/grpc/grpc-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -11769,7 +11769,7 @@ Source: https://github.com/grpc/grpc-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -11976,7 +11976,7 @@ Source: https://github.com/grpc/grpc-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -12183,7 +12183,7 @@ Source: https://github.com/grpc/grpc-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -12390,7 +12390,7 @@ Source: https://github.com/grpc/grpc-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -12597,7 +12597,7 @@ Source: https://github.com/grpc/grpc-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -12804,7 +12804,7 @@ Source: https://github.com/grpc/grpc-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -13011,7 +13011,7 @@ Source: https://github.com/grpc/grpc-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -13217,7 +13217,7 @@ Source: https://github.com/googleapis/common-protos-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -13423,7 +13423,7 @@ Source: https://github.com/googleapis/common-protos-java/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -13630,7 +13630,7 @@ Source: https://github.com/google/guava/blob/master/COPYING
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -13837,7 +13837,7 @@ Source: https://www.apache.org/licenses/LICENSE-2.0.txt
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -14044,7 +14044,7 @@ Source: https://www.apache.org/licenses/LICENSE-2.0.txt
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -14251,7 +14251,7 @@ Source: https://github.com/google/j2objc/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -14718,7 +14718,7 @@ The code released under the CDDL shall be governed by the laws of the
 State of California (excluding conflict-of-law provisions). Any
 litigation relating to this License shall be subject to the jurisdiction
 of the Federal Courts of the Northern District of California and the
-state courts of the State of California, with venue lying in Santa Clara
+statistic courts of the State of California, with venue lying in Santa Clara
 County, California.
 
 
@@ -15265,7 +15265,7 @@ Source: https://github.com/google/guava/blob/master/COPYING
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -15472,7 +15472,7 @@ Source: https://github.com/census-instrumentation/opencensus-java/blob/master/LI
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -15679,7 +15679,7 @@ Source: https://github.com/census-instrumentation/opencensus-java/blob/master/LI
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -15886,7 +15886,7 @@ Source: https://github.com/census-instrumentation/opencensus-java/blob/master/LI
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -16092,7 +16092,7 @@ Source: https://github.com/perfmark/perfmark/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.
@@ -16372,7 +16372,7 @@ Source: https://github.com/googleapis/java-iam/blob/master/LICENSE
       reproduction, and distribution of the Work otherwise complies with
       the conditions stated in this License.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
+   5. Submission of Contributions. Unless You explicitly statistic otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
       this License, without any additional terms or conditions.

@@ -5,9 +5,10 @@ import lombok.Data;
 
 @Data
 @Builder
-public class StateDto {
+public class StatisticDto {
     private String time;
     private Integer clicks;
+    private Integer users;
     private Integer messages;
     private Integer feedbacks;
 }

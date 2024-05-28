@@ -2,7 +2,7 @@ package com.toursiteback.util;
 
 import com.toursiteback.dto.CountryDto;
 import com.toursiteback.dto.FeedbackDto;
-import com.toursiteback.dto.StateDto;
+import com.toursiteback.dto.StatisticDto;
 import com.toursiteback.dto.TourDto;
 import com.toursiteback.messenger.dto.MessageDto;
 import com.toursiteback.messenger.dto.UserDto;
@@ -124,12 +124,13 @@ public class ModelConverter {
                 .build();
     }
 
-    public StateDto convert(State state) {
-        return StateDto.builder()
-                .time(state.getTime())
-                .clicks(state.getClicks())
-                .messages(state.getMessages())
-                .feedbacks(state.getFeedbacks())
+    public StatisticDto convert(Statistic statistic) {
+        return StatisticDto.builder()
+                .time(statistic.getTime())
+                .clicks(statistic.getClicks())
+                .users(statistic.getUsers())
+                .messages(statistic.getMessages())
+                .feedbacks(statistic.getFeedbacks())
                 .build();
     }
 

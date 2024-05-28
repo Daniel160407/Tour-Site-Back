@@ -11,14 +11,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "states")
-public class State {
+@Table(name = "statistics")
+public class Statistic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
     @Column(name = "time")
     private String time;
+    @Column(name = "users")
+    private Integer users;
     @Column(name = "clicks")
     private Integer clicks;
     @Column(name = "messages")

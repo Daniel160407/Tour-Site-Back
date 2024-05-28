@@ -6,9 +6,7 @@ import com.toursiteback.messenger.model.Message;
 import com.toursiteback.messenger.model.User;
 import com.toursiteback.messenger.repository.MessageRepository;
 import com.toursiteback.messenger.repository.UsersRepository;
-import com.toursiteback.model.State;
-import com.toursiteback.repository.StatesRepository;
-import com.toursiteback.service.states.StatesService;
+import com.toursiteback.service.states.StatisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
@@ -26,13 +24,13 @@ public class MessengerEndpoint extends TextWebSocketHandler {
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final UsersRepository usersRepository;
     private final MessageRepository messageRepository;
-    private final StatesService statesService;
+    private final StatisticsService statisticsService;
 
     @Autowired
-    public MessengerEndpoint(UsersRepository usersRepository, MessageRepository messageRepository, StatesService statesService) {
+    public MessengerEndpoint(UsersRepository usersRepository, MessageRepository messageRepository, StatisticsService statisticsService) {
         this.usersRepository = usersRepository;
         this.messageRepository = messageRepository;
-        this.statesService = statesService;
+        this.statisticsService = statisticsService;
     }
 
     @Override
@@ -63,7 +61,7 @@ public class MessengerEndpoint extends TextWebSocketHandler {
                         receiverSession.sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
                     }
                 }
-                statesService.increaseMessages();
+                statisticsService.increaseMessages();
             } else {
                 User client = usersRepository.getUserByEmail(message.getReceiverEmail());
                 for (WebSocketSession receiverSession : sessions) {
