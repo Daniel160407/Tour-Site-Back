@@ -15,23 +15,22 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 public class MessengerController {
 
-    private final UserServiceImpl messengerService;
+    private final UserServiceImpl userService;
     private final StatisticsService statisticsService;
 
     @Autowired
-    public MessengerController(UserServiceImpl messengerService, StatisticsService statisticsService) {
-        this.messengerService = messengerService;
+    public MessengerController(UserServiceImpl userService, StatisticsService statisticsService) {
+        this.userService = userService;
         this.statisticsService = statisticsService;
     }
 
     @PostMapping("/login")
-    @ResponseBody
     public ResponseEntity<UserDto> login(@RequestBody UserDto user) {
         try {
             if (!user.getEmail().isEmpty()) {
                 statisticsService.increaseUsers();
             }
-            return ResponseEntity.accepted().body(messengerService.login(user));
+            return ResponseEntity.accepted().body(userService.login(user));
         } catch (InvalidEmailOrPasswordException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }

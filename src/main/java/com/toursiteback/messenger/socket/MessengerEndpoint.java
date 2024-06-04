@@ -62,6 +62,8 @@ public class MessengerEndpoint extends TextWebSocketHandler {
                     }
                 }
                 statisticsService.increaseMessages();
+                usersRepository.updatePositionForSpecificEmail(message.getSenderEmail());
+                usersRepository.incrementPositionForAllExceptSpecificEmail(message.getSenderEmail());
             } else {
                 User client = usersRepository.getUserByEmail(message.getReceiverEmail());
                 for (WebSocketSession receiverSession : sessions) {
@@ -69,6 +71,8 @@ public class MessengerEndpoint extends TextWebSocketHandler {
                         receiverSession.sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
                     }
                 }
+                usersRepository.updatePositionForSpecificEmail(message.getReceiverEmail());
+                usersRepository.incrementPositionForAllExceptSpecificEmail(message.getReceiverEmail());
             }
             this.messageRepository.save(message);
         }

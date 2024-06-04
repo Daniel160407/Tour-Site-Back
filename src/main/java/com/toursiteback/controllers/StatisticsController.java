@@ -4,6 +4,7 @@ import com.toursiteback.dto.CountryDto;
 import com.toursiteback.dto.StatisticDto;
 import com.toursiteback.service.states.StatisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -35,7 +36,7 @@ public class StatisticsController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> AddCountry(@RequestBody CountryDto countryDto) {
+    public ResponseEntity<Void> addCountry(@RequestBody CountryDto countryDto) {
         statisticsService.addCountry(countryDto);
         return ResponseEntity.ok().build();
     }
@@ -57,5 +58,10 @@ public class StatisticsController {
     @ResponseBody
     public ResponseEntity<StatisticDto> clearStatistics(@RequestParam String statistic) {
         return ResponseEntity.ok().body(statisticsService.clearStatistic(statistic));
+    }
+
+    @RequestMapping(method = RequestMethod.OPTIONS)
+    public ResponseEntity<?> handleOptions() {
+        return ResponseEntity.ok().allow(HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE, HttpMethod.OPTIONS).build();
     }
 }

@@ -2,8 +2,11 @@ package com.toursiteback.messenger.repository;
 
 import com.toursiteback.messenger.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -21,4 +24,16 @@ public interface UsersRepository extends JpaRepository<User, Integer> {
     User getUserByEmailAndPassword(String email, String password);
 
     void deleteUserByEmail(String email);
+    @Modifying
+    @Transactional
+    @Query("UPDATE User u SET u.position = u.position + 1 WHERE u.email <> :email")
+    void incrementPositionForAllExceptSpecificEmail(@Param("email") String email);
+    @Modifying
+    @Transactional
+    @Query("UPDATE User u SET u.position = u.position - 1")
+    void reducePositionForAllExceptSpecificEmail();
+    @Modifying
+    @Transactional
+    @Query("UPDATE User u SET u.position = 1 WHERE u.email = :email")
+    void updatePositionForSpecificEmail(@Param("email") String email);
 }

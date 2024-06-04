@@ -4,6 +4,7 @@ import com.toursiteback.messenger.dto.MessageDto;
 import com.toursiteback.messenger.dto.UserDto;
 import com.toursiteback.messenger.service.admin.AdminMessengerServiceImpl;
 import com.toursiteback.messenger.service.message.MessengerServiceImpl;
+import com.toursiteback.messenger.service.users.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -18,30 +19,30 @@ import java.util.List;
 public class AdminMessengerController {
     private final AdminMessengerServiceImpl adminMessengerService;
     private final MessengerServiceImpl messengerService;
+    private final UserServiceImpl userService;
 
     @Autowired
-    public AdminMessengerController(AdminMessengerServiceImpl adminMessengerService, MessengerServiceImpl messengerService) {
+    public AdminMessengerController(AdminMessengerServiceImpl adminMessengerService, MessengerServiceImpl messengerService, UserServiceImpl userService) {
         this.adminMessengerService = adminMessengerService;
         this.messengerService = messengerService;
+        this.userService = userService;
     }
 
     @GetMapping
-    @ResponseBody
     public ResponseEntity<List<UserDto>> getUsers() {
         return ResponseEntity.ok().body(adminMessengerService.getUsers());
     }
 
     @GetMapping("/messages")
-    @ResponseBody
     public ResponseEntity<List<MessageDto>> getMessages(@RequestParam String email) {
         return ResponseEntity.ok().body(messengerService.getMessages(email));
     }
 
     @DeleteMapping
-    @ResponseBody
     public ResponseEntity<List<UserDto>> deleteUser(@RequestParam String email) {
         messengerService.deleteMessages(email);
         adminMessengerService.deleteUser(email);
+        userService.decreaseUserPositions();
         return ResponseEntity.ok().body(adminMessengerService.getUsers());
     }
 

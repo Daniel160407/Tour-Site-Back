@@ -6,4 +6,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface UserService {
     UserDto login(UserDto user);
+    void decreaseUserPositions();
 }

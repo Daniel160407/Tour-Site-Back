@@ -33,7 +33,13 @@ public class UserServiceImpl implements UserService {
             }
         } else {
             userRepository.save(modelConverter.convert(user));
+            userRepository.incrementPositionForAllExceptSpecificEmail(user.getEmail());
             return user;
         }
+    }
+
+    @Override
+    public void decreaseUserPositions() {
+        userRepository.reducePositionForAllExceptSpecificEmail();
     }
 }

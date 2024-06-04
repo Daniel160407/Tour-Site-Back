@@ -24,4 +24,6 @@ public class User {
     private String password;
     @Column(name = "sid")
     private String sid;
+    @Column(name = "position")
+    private Integer position;
 }

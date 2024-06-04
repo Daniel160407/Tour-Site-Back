@@ -74,6 +74,7 @@ public class ModelConverter {
                 .email(user.getEmail())
                 .password(user.getPassword())
                 .sid(user.getSid())
+                .position(user.getPosition())
                 .build();
     }
 
@@ -83,6 +84,7 @@ public class ModelConverter {
                 .email(userDto.getEmail())
                 .password(userDto.getPassword())
                 .sid(userDto.getSid())
+                .position(userDto.getPosition())
                 .build();
     }
 
