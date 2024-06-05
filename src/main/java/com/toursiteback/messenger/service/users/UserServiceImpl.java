@@ -4,6 +4,7 @@ import com.toursiteback.messenger.dto.UserDto;
 import com.toursiteback.messenger.model.User;
 import com.toursiteback.messenger.repository.UsersRepository;
 import com.toursiteback.service.exception.InvalidEmailOrPasswordException;
+import com.toursiteback.service.exception.UserNotAccessibleException;
 import com.toursiteback.util.ModelConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,5 +42,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public void decreaseUserPositions() {
         userRepository.reducePositionForAllExceptSpecificEmail();
+    }
+
+    @Override
+    public UserDto getUserByEmail(String email) {
+        User user = userRepository.getUserByEmail(email);
+        if (user != null) {
+            return ModelConverter.convert(user);
+        } else {
+            throw new UserNotAccessibleException();
+        }
     }
 }

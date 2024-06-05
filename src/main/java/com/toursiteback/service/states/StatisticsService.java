@@ -11,7 +11,7 @@ public interface StatisticsService {
     void increaseTime(String time);
 
     void increaseClicks(Integer clicks);
-    void increaseUsers();
+    void increaseUsers(String email);
 
     void increaseMessages();
 

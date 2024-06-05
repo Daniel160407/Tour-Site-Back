@@ -7,4 +7,5 @@ import org.springframework.stereotype.Service;
 public interface UserService {
     UserDto login(UserDto user);
     void decreaseUserPositions();
+    UserDto getUserByEmail(String email);
 }

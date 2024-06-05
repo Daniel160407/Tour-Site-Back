@@ -2,6 +2,8 @@ package com.toursiteback.service.states;
 
 import com.toursiteback.dto.CountryDto;
 import com.toursiteback.dto.StatisticDto;
+import com.toursiteback.messenger.model.User;
+import com.toursiteback.messenger.repository.UsersRepository;
 import com.toursiteback.model.Country;
 import com.toursiteback.model.Statistic;
 import com.toursiteback.repository.CountriesRepository;
@@ -18,12 +20,14 @@ import java.util.Objects;
 public class StatisticsServiceImpl implements StatisticsService {
     private final StatisticsRepository statisticsRepository;
     private final CountriesRepository countriesRepository;
+    private final UsersRepository usersRepository;
     private final ModelConverter modelConverter;
 
     @Autowired
-    public StatisticsServiceImpl(StatisticsRepository statisticsRepository, CountriesRepository countriesRepository, ModelConverter modelConverter) {
+    public StatisticsServiceImpl(StatisticsRepository statisticsRepository, CountriesRepository countriesRepository, UsersRepository usersRepository, ModelConverter modelConverter) {
         this.statisticsRepository = statisticsRepository;
         this.countriesRepository = countriesRepository;
+        this.usersRepository = usersRepository;
         this.modelConverter = modelConverter;
     }
 
@@ -46,11 +50,14 @@ public class StatisticsServiceImpl implements StatisticsService {
     }
 
     @Override
-    public void increaseUsers() {
-        Statistic statistic = statisticsRepository.findById(1).orElse(null);
-        if (statistic != null) {
-            statistic.setUsers(statistic.getUsers() + 1);
-            statisticsRepository.save(statistic);
+    public void increaseUsers(String email) {
+        User user = usersRepository.getUserByEmail(email);
+        if (user == null) {
+            Statistic statistic = statisticsRepository.findById(1).orElse(null);
+            if (statistic != null) {
+                statistic.setUsers(statistic.getUsers() + 1);
+                statisticsRepository.save(statistic);
+            }
         }
     }
 
