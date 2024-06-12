@@ -1,6 +1,8 @@
 package com.toursiteback.service.adminPanel;
 
 import com.toursiteback.dto.TourDto;
+import com.toursiteback.messenger.model.User;
+import com.toursiteback.messenger.repository.UsersRepository;
 import com.toursiteback.model.Admin;
 import com.toursiteback.model.Tour;
 import com.toursiteback.model.TourWithImg;
@@ -20,12 +22,14 @@ import java.nio.file.Paths;
 public class AdminPanelServiceImpl implements AdminPanelService {
     private final ModelConverter modelConverter;
     private final TourRepository tourRepository;
+    private final UsersRepository usersRepository;
     private final AdminProvider adminProvider;
 
     @Autowired
-    public AdminPanelServiceImpl(ModelConverter modelConverter, TourRepository tourRepository, AdminProvider adminProvider) {
+    public AdminPanelServiceImpl(ModelConverter modelConverter, TourRepository tourRepository, UsersRepository usersRepository, AdminProvider adminProvider) {
         this.modelConverter = modelConverter;
         this.tourRepository = tourRepository;
+        this.usersRepository = usersRepository;
         this.adminProvider = adminProvider;
     }
 
@@ -77,5 +81,10 @@ public class AdminPanelServiceImpl implements AdminPanelService {
 
         tourRepository.delete(tourToDelete);
         return modelConverter.convert(tourToDelete);
+    }
+
+    @Override
+    public User getUser(String name) {
+        return usersRepository.getUserByName(name);
     }
 }
