@@ -5,6 +5,9 @@ import com.toursiteback.model.Admin;
 import com.toursiteback.model.TourWithImg;
 import com.toursiteback.service.adminPanel.AdminPanelService;
 import com.toursiteback.service.exception.InvalidEmailOrPasswordException;
+import com.toursiteback.util.JwtUtils;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
@@ -13,20 +16,24 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 @RequestMapping("/tours/adminpanel")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", exposedHeaders = "Authorization")
 public class AdminPanelController {
     private final AdminPanelService adminPanelService;
+    private final JwtUtils jwtUtils;
 
     @Autowired
-    public AdminPanelController(AdminPanelService adminPanelService) {
+    public AdminPanelController(AdminPanelService adminPanelService, JwtUtils jwtUtils) {
         this.adminPanelService = adminPanelService;
+        this.jwtUtils = jwtUtils;
     }
 
     @PostMapping("/login")
     @ResponseBody
-    public ResponseEntity<Void> login(@RequestBody Admin admin) {
+    public ResponseEntity<Void> login(@RequestBody Admin admin, HttpServletResponse response) {
         try {
             adminPanelService.login(admin);
+            val token = jwtUtils.generateToken(admin.getEmail());
+            response.addHeader(jwtUtils.JWT_HEADER, jwtUtils.JWT_PREFIX + token);
             return ResponseEntity.ok().build();
         } catch (InvalidEmailOrPasswordException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
