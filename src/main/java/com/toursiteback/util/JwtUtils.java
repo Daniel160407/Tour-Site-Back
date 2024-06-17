@@ -1,6 +1,7 @@
 package com.toursiteback.util;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,7 +34,7 @@ public class JwtUtils {
         try {
             getClaims(token);
             return true;
-        } catch (Exception e) {
+        } catch (ExpiredJwtException e) {
             return false;
         }
     }
