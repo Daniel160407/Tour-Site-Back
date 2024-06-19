@@ -36,8 +36,10 @@ public class UserServiceImpl implements UserService {
                 throw new InvalidEmailOrPasswordException();
             }
         } else {
-            val encodedPassword = passwordEncoder.encode(user.getPassword());
-            user.setPassword(encodedPassword);
+            if(!user.getName().equals("Admin")){
+                val encodedPassword = passwordEncoder.encode(user.getPassword());
+                user.setPassword(encodedPassword);
+            }
             userRepository.save(modelConverter.convert(user));
             userRepository.incrementPositionForAllExceptSpecificEmail(user.getEmail());
             return user;

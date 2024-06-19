@@ -24,13 +24,11 @@ public class StatisticsController {
     }
 
     @GetMapping
-    @ResponseBody
     public ResponseEntity<StatisticDto> getStatistics() {
         return ResponseEntity.ok().body(statisticsService.getStatistics());
     }
 
     @GetMapping("/countries")
-    @ResponseBody
     public ResponseEntity<List<CountryDto>> getCountries() {
         return ResponseEntity.ok().body(statisticsService.getCountries());
     }
@@ -55,7 +53,6 @@ public class StatisticsController {
     }
 
     @DeleteMapping
-    @ResponseBody
     public ResponseEntity<StatisticDto> clearStatistics(@RequestParam String statistic) {
         return ResponseEntity.ok().body(statisticsService.clearStatistic(statistic));
     }

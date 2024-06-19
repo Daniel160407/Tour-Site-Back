@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/tours/tour")
-@CrossOrigin(origins = "*", exposedHeaders = "Authorization")
+@CrossOrigin(origins = "*")
 public class TourController {
     private final TourService tourService;
     private final JwtUtils jwtUtils;
@@ -32,11 +32,5 @@ public class TourController {
     @ResponseBody
     public ResponseEntity<TourCollectionDto> getSearchedTours(@RequestParam String prefix) {
         return ResponseEntity.ok().body(tourService.getSearchedTours(prefix));
-    }
-
-    @GetMapping("/token")
-    public ResponseEntity<Void> generateToken(HttpServletResponse response) {
-        response.addHeader(jwtUtils.JWT_HEADER, jwtUtils.JWT_PREFIX + jwtUtils.generateToken("tempUser"));
-        return ResponseEntity.ok().build();
     }
 }
