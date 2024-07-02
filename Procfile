@@ -1,0 +1,1 @@
+web: java -jar build/libs/Tour-Site-Back-0.0.1-SNAPSHOT.jar
