@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
                 throw new InvalidEmailOrPasswordException();
             }
         } else {
-            if(!user.getName().equals("Admin")){
+            if (!user.getName().equals("Admin")) {
                 val encodedPassword = passwordEncoder.encode(user.getPassword());
                 user.setPassword(encodedPassword);
             }
