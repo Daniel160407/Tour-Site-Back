@@ -9045,7 +9045,7 @@ const Xd = ml.createRoot(document.getElementById("root")), Yd = ({adminMode: e, 
 function Zd({adminMode: e}) {
     const [t, n] = O.useState([]);
     O.useEffect(() => {
-        F.get("https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/feedback", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(i => {
+        F.get("https://www.georgiaandtours.com/tours/feedback", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(i => {
             const l = i.data;
             n([]);
             for (let s = 0; s < l.length; s++) n(u => [...u, l[s]])
@@ -9055,14 +9055,14 @@ function Zd({adminMode: e}) {
         const i = document.getElementById("commentator"), l = document.getElementById("comment");
         if (i.value !== "" && l.value !== "") {
             const s = {name: i.value, time: new Date().toLocaleDateString(), comment: l.value};
-            i.value = "", l.value = "", F.post("https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/feedback", s, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(u => {
+            i.value = "", l.value = "", F.post("https://www.georgiaandtours.com/tours/feedback", s, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(u => {
                 const a = u.data;
                 n([]);
                 for (let d = 0; d < a.length; d++) n(c => [...c, a[d]])
             })
         }
     }, o = i => {
-        F.delete(`https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/feedback?comment=${i}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(l => {
+        F.delete(`https://www.georgiaandtours.com/tours/feedback?comment=${i}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(l => {
             const s = l.data;
             n([]);
             for (let u = 0; u < s.length; u++) n(a => [...a, s[u]])
@@ -9151,11 +9151,11 @@ function Vg({tour: e, exit: t}) {
         const {name: m, value: w} = c;
         r(g => ({...g, [m]: w}))
     }, a = c => {
-        c.preventDefault(), F.put("https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/adminpanel", n, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(() => t())
+        c.preventDefault(), F.put("https://www.georgiaandtours.com/tours/adminpanel", n, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(() => t())
     };
 
     function d() {
-        F.delete(`https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/adminpanel?name=${n.name}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(() => t())
+        F.delete(`https://www.georgiaandtours.com/tours/adminpanel?name=${n.name}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(() => t())
     }
 
     return f.jsx(f.Fragment, {
@@ -9229,7 +9229,7 @@ function Kg() {
     function T(R) {
         R.preventDefault();
         const $ = new FormData;
-        $.append("title", e), $.append("description", o), $.append("direction", n), $.append("duration", l), $.append("history", u), $.append("requirements", d), $.append("price", m), $.append("language", g), $.append("image", x), F.post("https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/adminpanel", $, {headers: {"Content-Type": "multipart/form-data"}});
+        $.append("title", e), $.append("description", o), $.append("direction", n), $.append("duration", l), $.append("history", u), $.append("requirements", d), $.append("price", m), $.append("language", g), $.append("image", x), F.post("https://www.georgiaandtours.com/tours/adminpanel", $, {headers: {"Content-Type": "multipart/form-data"}});
         const se = document.getElementsByClassName("inputs");
         for (let fe = 0; fe < se.length; fe++) se[fe].value = "";
         v(!1)
@@ -9319,23 +9319,23 @@ function wu({adminMode: e, searchText: t}) {
         if (!e) {
             F.get("https://ipinfo.io/json?token=d2261c6bcf22ce").then(N => {
                 const C = {ip: N.data.ip, country: N.data.country};
-                F.post("https://georgiaandtours-83fafaad1b6e.herokuapp.com/statistics", C, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}})
+                F.post("https://www.georgiaandtours.com/statistics", C, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}})
             });
             const E = () => {
                 const C = ((Date.now() - x.current) / 1e3 / 60).toFixed(2);
-                F.put(`https://georgiaandtours-83fafaad1b6e.herokuapp.com/statistics?time=${C}&clicks=${h.current}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}})
+                F.put(`https://www.georgiaandtours.com/statistics?time=${C}&clicks=${h.current}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}})
             };
             return window.addEventListener("beforeunload", E), () => {
                 window.removeEventListener("beforeunload", E)
             }
         }
     }, []), O.useEffect(() => {
-        d && l && F.get(`https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/tour?language=${d}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(E => {
+        d && l && F.get(`https://www.georgiaandtours.com/tours/tour?language=${d}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(E => {
             const N = E.data.tours.map(C => ({...C, imageData: C.imageData}));
             r(N), N.length !== 0 && w(Math.floor(Math.random() * N.length))
         })
     }, [d, l]), O.useEffect(() => {
-        t !== void 0 && F.get(`https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/tour/search?prefix=${t}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(E => {
+        t !== void 0 && F.get(`https://www.georgiaandtours.com/tours/tour/search?prefix=${t}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(E => {
             if (E !== void 0) {
                 const N = E.data.tours.map(C => ({...C, imageData: C.imageData}));
                 r(N), N.length !== 0 && w(Math.floor(Math.random() * N.length))
@@ -9442,14 +9442,14 @@ function wu({adminMode: e, searchText: t}) {
 function bd({setContact: e, globalContacts: t}) {
     const [n, r] = O.useState([]);
     O.useEffect(() => {
-        F.get("https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/adminpanel/messenger", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(i => {
+        F.get("https://www.georgiaandtours.com/tours/adminpanel/messenger", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(i => {
             r(i.data.sort((l, s) => l.position - s.position))
         })
     }, []), O.useEffect(() => {
         t !== void 0 && r(t)
     }, [t]);
     const o = i => {
-        F.delete(`https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/adminpanel/messenger?email=${i}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(l => {
+        F.delete(`https://www.georgiaandtours.com/tours/adminpanel/messenger?email=${i}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(l => {
             r(l.data.sort((s, u) => s.position - u.position))
         })
     };
@@ -9476,10 +9476,10 @@ function Qg({contact: e, setGlobalContacts: t}) {
     const [n, r] = O.useState([]), [o, i] = O.useState(""), [l, s] = O.useState(null), [u, a] = O.useState(!1), [d, c] = O.useState(null),
         m = O.useRef(null);
     O.useEffect(() => {
-        const x = new WebSocket("ws://georgiaandtours-83fafaad1b6e.herokuapp.com/messenger");
+        const x = new WebSocket("ws://www.georgiaandtours.com/messenger");
         return c(x), x.onmessage = function (h) {
             const p = JSON.parse(h.data);
-            p.sender === "server" ? s(p.message) : (p.received = !0, r(v => [...v, p]), F.get("https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/adminpanel/messenger", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(v => {
+            p.sender === "server" ? s(p.message) : (p.received = !0, r(v => [...v, p]), F.get("https://www.georgiaandtours.com/tours/adminpanel/messenger", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(v => {
                 t(v.data.sort((S, E) => S.position - E.position))
             }), document.visibilityState === "hidden" && new Audio("/sounds/notification-sound.wav").play())
         }, x.onerror = function (h) {
@@ -9490,10 +9490,10 @@ function Qg({contact: e, setGlobalContacts: t}) {
     }, []), O.useEffect(() => {
         if (l !== null) {
             const x = {name: "Admin", email: "", password: "", sid: l};
-            F.post("https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/messenger/login", x, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}})
+            F.post("https://www.georgiaandtours.com/tours/messenger/login", x, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}})
         }
     }, [l]), O.useEffect(() => {
-        e !== null && (a(!0), F.get(`https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/adminpanel/messenger/messages?email=${e.email}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(x => {
+        e !== null && (a(!0), F.get(`https://www.georgiaandtours.com/tours/adminpanel/messenger/messages?email=${e.email}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(x => {
             const h = x.data;
             r([]);
             for (let p = 0; p < h.length; p++) h[p].received = h[p].senderEmail !== "", r(v => [...v, h[p]])
@@ -9557,10 +9557,10 @@ const Gg = () => {
     const [e, t] = O.useState(0), [n, r] = O.useState(0), [o, i] = O.useState(0), [l, s] = O.useState(0), [u, a] = O.useState(0), [d, c] = O.useState([]);
     O.useEffect(() => {
         const g = () => {
-            F.get("https://georgiaandtours-83fafaad1b6e.herokuapp.com/statistics", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(x => {
+            F.get("https://www.georgiaandtours.com/statistics", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(x => {
                 const h = x.data;
                 t(h.time), r(h.clicks), i(h.users), s(h.messages), a(h.feedbacks)
-            }).catch(x => console.error("Error fetching statistics:", x)), F.get("https://georgiaandtours-83fafaad1b6e.herokuapp.com/statistics/countries", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(x => {
+            }).catch(x => console.error("Error fetching statistics:", x)), F.get("https://www.georgiaandtours.com/statistics/countries", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(x => {
                 const h = x.data || [];
                 if (Array.isArray(h)) {
                     const p = h.reduce((E, N) => {
@@ -9580,12 +9580,12 @@ const Gg = () => {
         return () => clearInterval(y)
     }, []);
     const m = g => {
-        F.delete(`https://georgiaandtours-83fafaad1b6e.herokuapp.com/statistics?statistic=${g}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(y => {
+        F.delete(`https://www.georgiaandtours.com/statistics?statistic=${g}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(y => {
             const x = y.data;
             t(x.time), r(x.clicks), i(x.users), s(x.messages), a(x.feedbacks)
         }).catch(y => console.error("Error clearing statistic:", y))
     }, w = () => {
-        F.delete("https://georgiaandtours-83fafaad1b6e.herokuapp.com/statistics/countries", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}), c([])
+        F.delete("https://www.georgiaandtours.com/statistics/countries", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}), c([])
     };
     return f.jsxs("div", {
         id: "statistics", className: "tab-pane tab fade", children: [f.jsxs("div", {
@@ -9670,7 +9670,7 @@ function Yg() {
         if (r.key === "Enter" || r === "Enter") {
             const o = document.getElementById("email").value, i = document.getElementById("password").value,
                 l = {email: o, password: i};
-            F.post("https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/adminpanel/login", l).then(s => {
+            F.post("https://www.georgiaandtours.com/tours/adminpanel/login", l).then(s => {
                 s.status === 200 && (document.getElementById("checkbox").checked && (I.set("email", o, {expires: 1}), I.set("password", i, {expires: 1})), I.set("token", s.headers.get("Authorization"), {expires: 1}), Xd.render(f.jsx(Xg, {})))
             }), t(!0)
         }
@@ -9707,7 +9707,7 @@ function Zg() {
 function bg({sid: e, onLogin: t, setGlobalEmail: n}) {
     const [r, o] = O.useState(I.get("username") || ""), [i, l] = O.useState(I.get("userEmail") || ""), [s, u] = O.useState(I.get("userPassword") || ""), [a, d] = O.useState(!1);
     O.useEffect(() => {
-        e !== "" && r !== "" && i !== "" && s !== "" && F.get(`https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/users?email=${i}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(m => {
+        e !== "" && r !== "" && i !== "" && s !== "" && F.get(`https://www.georgiaandtours.com/tours/users?email=${i}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(m => {
             m.status === 200 && c("Enter")
         })
     }, [e]);
@@ -9715,7 +9715,7 @@ function bg({sid: e, onLogin: t, setGlobalEmail: n}) {
     function c(m) {
         if (m.key === "Enter" || m === "Enter") {
             const w = {name: r, email: i, password: s, sid: e, position: 1};
-            F.post("https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/messenger/login", w, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(g => {
+            F.post("https://www.georgiaandtours.com/tours/messenger/login", w, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(g => {
                 g.status === 202 && (I.set("username", r, {expires: 1}), I.set("userEmail", i, {expires: 1}), I.set("userPassword", s, {expires: 1}), n(i), t())
             }).catch(() => {
                 d(!0), document.getElementsByClassName("log-in-container")[0].style.height = "270px"
@@ -9776,13 +9776,13 @@ function ey() {
     const [e, t] = O.useState(!0), [n, r] = O.useState(""), [o, i] = O.useState(""), [l, s] = O.useState([]), [u, a] = O.useState(""), [d, c] = O.useState(null),
         m = O.useRef(null);
     O.useEffect(() => {
-        const x = new WebSocket("ws://georgiaandtours-83fafaad1b6e.herokuapp.com/messenger");
+        const x = new WebSocket("ws://www.georgiaandtours.com/messenger");
         c(x), x.onmessage = function (h) {
             const p = JSON.parse(h.data);
             p.sender === "server" ? r(p.message) : (p.received = !0, s(v => [...v, p]), document.visibilityState === "hidden" && new Audio("/sounds/notification-sound.wav").play())
         }
     }, []), O.useEffect(() => {
-        e || F.get(`https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/adminpanel/messenger/messages?email=${o}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(x => {
+        e || F.get(`https://www.georgiaandtours.com/tours/adminpanel/messenger/messages?email=${o}`, {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(x => {
             const h = x.data;
             s([]);
             for (let p = 0; p < h.length; p++) h[p].received = h[p].senderEmail === "", s(v => [...v, h[p]])
