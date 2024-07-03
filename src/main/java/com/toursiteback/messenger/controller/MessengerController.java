@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/tours/messenger")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", exposedHeaders = "Authorization")
 public class MessengerController {
 
     private final UserServiceImpl userService;

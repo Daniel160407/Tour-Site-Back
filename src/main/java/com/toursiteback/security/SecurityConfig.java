@@ -33,9 +33,12 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.GET, "/adminpanel", "/tours", "/*.html", "/assets/*.css", "/assets/*.js", "/images/*.*", "/fonts/*.ttf", "/svg/*.svg").permitAll()
                         .requestMatchers(HttpMethod.POST, "/tours/adminpanel/login").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/tours/tour").permitAll()
                         .requestMatchers(HttpMethod.GET,"/tours/tour/*").permitAll()
                         .requestMatchers(HttpMethod.POST,"/tours/tour/*").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/tours").permitAll()
                         .requestMatchers(HttpMethod.GET,"/tours/*").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/tours").permitAll()
                         .requestMatchers(HttpMethod.POST,"/tours/*").permitAll()
                         .requestMatchers(HttpMethod.POST,"/tours/messenger/login").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS,"/tours/messenger/login").permitAll()
