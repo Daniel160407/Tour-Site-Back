@@ -9760,14 +9760,14 @@ function bg({sid: e, onLogin: t, setGlobalEmail: n}) {
                 className: "errorMessage",
                 children: "Invalid email or password"
             }), f.jsx("button", {className: "log-in-button", type: "submit", children: "Go to Chat"})]
-        }), f.jsx("div", {
+        }), f.jsxs("div", {
             className: "socialNetwork",
-            children: f.jsx("a", {
+            children: [f.jsx("p", {children: "Phone: +995 593 340 874"}), f.jsx("p", {children: "Available on Whatsapp and Viber"}), f.jsx("a", {
                 href: "https://www.facebook.com/goga.abulashvili",
                 target: "_blank",
                 rel: "noopener noreferrer",
                 children: f.jsx("img", {src: "/svg/facebook.svg", alt: "facebook"})
-            })
+            })]
         })]
     })
 }
@@ -9822,7 +9822,7 @@ function ey() {
                 children: f.jsx("input", {
                     id: "messageInput",
                     type: "text",
-                    placeholder: "Tipe something",
+                    placeholder: "Type something",
                     onChange: x => a(x.target.value),
                     onKeyPress: g
                 })

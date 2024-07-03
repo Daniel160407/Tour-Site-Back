@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 @Service
 public class AdminPanelServiceImpl implements AdminPanelService {
@@ -73,10 +74,13 @@ public class AdminPanelServiceImpl implements AdminPanelService {
     @Override
     public TourDto deleteTour(String name) {
         Tour tourToDelete = tourRepository.findByName(name);
-        File file = new File(tourToDelete.getImgUrl());
+        List<Tour> foundTours = tourRepository.findAllByImgUrl(tourToDelete.getImgUrl());
 
-        if (file.exists()) {
-            file.delete();
+        if (foundTours.size() == 1) {
+            File file = new File(tourToDelete.getImgUrl());
+            if (file.exists()) {
+                file.delete();
+            }
         }
 
         tourRepository.delete(tourToDelete);

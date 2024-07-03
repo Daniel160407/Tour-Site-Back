@@ -11,6 +11,7 @@ public interface TourRepository extends JpaRepository<Tour, Integer> {
     List<Tour> findAllByLanguage(String language);
 
     List<Tour> findAllByNameStartingWith(String prefix);
+    List<Tour>findAllByImgUrl(String imgUrl);
 
     Tour save(Tour tour);
 

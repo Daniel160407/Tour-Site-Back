@@ -1363,7 +1363,7 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px #0000001a;
-    background-color: #ffffff80
+    background-color: #f9f9f9
 }
 
 .log-in-container h2 {
@@ -1401,13 +1401,41 @@ h2 {
 }
 
 .socialNetwork {
-    padding-top: 60px;
     display: flex;
-    justify-content: center
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px #0000001a
 }
 
-.socialNetwork img {
-    width: 50px
+.socialNetwork p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333
+}
+
+.socialNetwork p:first-of-type {
+    font-weight: 700
+}
+
+.socialNetwork a {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none
+}
+
+.socialNetwork a img {
+    width: 32px;
+    height: 32px;
+    transition: transform .3s ease
+}
+
+.socialNetwork a img:hover {
+    transform: scale(1.1)
 }
 
 .chat-container {
