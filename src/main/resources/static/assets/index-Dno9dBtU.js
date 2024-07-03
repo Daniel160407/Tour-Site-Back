@@ -9476,7 +9476,7 @@ function Qg({contact: e, setGlobalContacts: t}) {
     const [n, r] = O.useState([]), [o, i] = O.useState(""), [l, s] = O.useState(null), [u, a] = O.useState(!1), [d, c] = O.useState(null),
         m = O.useRef(null);
     O.useEffect(() => {
-        const x = new WebSocket("ws://georgiaandtours-83fafaad1b6e.herokuapp.com/messenger");
+        const x = new WebSocket("wss://georgiaandtours-83fafaad1b6e.herokuapp.com/messenger");
         return c(x), x.onmessage = function (h) {
             const p = JSON.parse(h.data);
             p.sender === "server" ? s(p.message) : (p.received = !0, r(v => [...v, p]), F.get("https://georgiaandtours-83fafaad1b6e.herokuapp.com/tours/adminpanel/messenger", {headers: {Authorization: `${I.get("token") ? I.get("token") : null}`}}).then(v => {
@@ -9776,7 +9776,7 @@ function ey() {
     const [e, t] = O.useState(!0), [n, r] = O.useState(""), [o, i] = O.useState(""), [l, s] = O.useState([]), [u, a] = O.useState(""), [d, c] = O.useState(null),
         m = O.useRef(null);
     O.useEffect(() => {
-        const x = new WebSocket("ws://georgiaandtours-83fafaad1b6e.herokuapp.com/messenger");
+        const x = new WebSocket("wss://georgiaandtours-83fafaad1b6e.herokuapp.com/messenger");
         c(x), x.onmessage = function (h) {
             const p = JSON.parse(h.data);
             p.sender === "server" ? r(p.message) : (p.received = !0, s(v => [...v, p]), document.visibilityState === "hidden" && new Audio("/sounds/notification-sound.wav").play())
