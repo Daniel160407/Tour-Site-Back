@@ -1,4 +1,4 @@
-CREATE TABLE `tours`.`feedbacks`
+CREATE TABLE `heroku_26deced418a261c`.`feedbacks`
 (
     `id`      INT           NOT NULL AUTO_INCREMENT,
     `name`    VARCHAR(45)   NOT NULL,

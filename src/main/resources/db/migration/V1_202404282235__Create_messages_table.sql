@@ -1,4 +1,4 @@
-CREATE TABLE `tours`.`messages`
+CREATE TABLE `heroku_26deced418a261c`.`messages`
 (
     `id`       INT          NOT NULL AUTO_INCREMENT,
     `sender`   VARCHAR(45)  NOT NULL,

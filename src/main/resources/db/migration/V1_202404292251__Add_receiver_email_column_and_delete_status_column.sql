@@ -1,4 +1,4 @@
-ALTER TABLE `tours`.`users`
+ALTER TABLE `heroku_26deced418a261c`.`users`
 DROP
 COLUMN `status`;
 

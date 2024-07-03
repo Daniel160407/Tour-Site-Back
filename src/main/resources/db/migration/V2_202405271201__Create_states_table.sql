@@ -1,4 +1,4 @@
-CREATE TABLE `tours`.`states`
+CREATE TABLE `heroku_26deced418a261c`.`states`
 (
     `id`        INT         NOT NULL AUTO_INCREMENT,
     `time`      VARCHAR(45) NOT NULL,
