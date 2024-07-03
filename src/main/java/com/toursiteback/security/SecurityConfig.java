@@ -47,7 +47,6 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST,"/statistics").permitAll()
                         .requestMatchers(HttpMethod.PUT,"/statistics").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS,"/statistics").permitAll()
-                        .requestMatchers(HttpMethod.GET,"/statistics").permitAll()
                         .requestMatchers(HttpMethod.GET,"/api/v3/auth").permitAll()
                         .requestMatchers(HttpMethod.GET,"/api/v3/signup").permitAll()
                         .requestMatchers(HttpMethod.GET,"/messenger").permitAll()
