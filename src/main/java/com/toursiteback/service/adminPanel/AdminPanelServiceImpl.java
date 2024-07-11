@@ -11,6 +11,7 @@ import com.toursiteback.service.exception.InvalidEmailOrPasswordException;
 import com.toursiteback.util.ModelConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
@@ -90,5 +91,20 @@ public class AdminPanelServiceImpl implements AdminPanelService {
     @Override
     public User getUser(String name) {
         return usersRepository.getUserByName(name);
+    }
+
+    @Override
+    public void addImages(List<MultipartFile> images) {
+        String uploadDir = "src/main/resources/images/";
+
+        for (MultipartFile image : images) {
+            try {
+                Files.createDirectories(Paths.get(uploadDir));
+                Path path = Paths.get(uploadDir + image.getOriginalFilename());
+                Files.write(path, image.getBytes());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

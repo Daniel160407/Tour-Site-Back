@@ -14,6 +14,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Controller
 @RequestMapping("/tours/adminpanel")
 @CrossOrigin(origins = "*", exposedHeaders = "Authorization")
@@ -28,7 +31,6 @@ public class AdminPanelController {
     }
 
     @PostMapping("/login")
-    @ResponseBody
     public ResponseEntity<Void> login(@RequestBody Admin admin, HttpServletResponse response) {
         try {
             adminPanelService.login(admin);
@@ -41,7 +43,6 @@ public class AdminPanelController {
     }
 
     @PostMapping
-    @ResponseBody
     public ResponseEntity<TourDto> addTour(@RequestPart("title") String title,
                                            @RequestPart("description") String description,
                                            @RequestPart("direction") String direction,
@@ -67,14 +68,18 @@ public class AdminPanelController {
         ));
     }
 
+    @PostMapping("/images")
+    public ResponseEntity<?> addImages(@RequestPart("images") List<MultipartFile> images) {
+        adminPanelService.addImages(images);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
     @PutMapping
-    @ResponseBody
     public ResponseEntity<TourDto> updateTour(@RequestBody TourDto tour) {
         return ResponseEntity.ok().body(adminPanelService.updateTour(tour));
     }
 
     @DeleteMapping
-    @ResponseBody
     public ResponseEntity<TourDto> deleteTour(@RequestParam String name) {
         return ResponseEntity.ok().body(adminPanelService.deleteTour(name));
     }

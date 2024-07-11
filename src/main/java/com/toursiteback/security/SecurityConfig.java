@@ -39,7 +39,6 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET,"/tours").permitAll()
                         .requestMatchers(HttpMethod.GET,"/tours/*").permitAll()
                         .requestMatchers(HttpMethod.POST,"/tours").permitAll()
-                        .requestMatchers(HttpMethod.POST,"/tours/*").permitAll()
                         .requestMatchers(HttpMethod.POST,"/tours/messenger/login").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS,"/tours/messenger/login").permitAll()
                         .requestMatchers(HttpMethod.GET,"/tours/adminpanel/messenger/messages").permitAll()
