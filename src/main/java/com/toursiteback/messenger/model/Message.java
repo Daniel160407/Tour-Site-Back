@@ -24,4 +24,6 @@ public class Message {
     private String receiver;
     @Column(name = "message")
     private String message;
+    @Column(name = "time")
+    private String time;
 }

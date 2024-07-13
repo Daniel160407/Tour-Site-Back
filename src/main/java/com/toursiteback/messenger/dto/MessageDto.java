@@ -13,6 +13,7 @@ public class MessageDto {
     private String sender;
     private String receiver;
     private String message;
+    private String time;
 
     public MessageDto(String sender, String message) {
         this.sender = sender;

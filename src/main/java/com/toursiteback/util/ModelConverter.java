@@ -95,6 +95,7 @@ public class ModelConverter {
                 .sender(message.getSender())
                 .receiver(message.getReceiver())
                 .message(message.getMessage())
+                .time(message.getTime())
                 .build();
     }
 
